@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop</title>
+  </head>
+
+  <body>
+
+    <header>
+
+      <nav>
+    
+        <a href="">
+          <img src="./img/branding/logo_light_horizontal.svg" alt="">
+        </a>
+    
+        <ul>
+          <li>
+            <a href="./pages/shop.html">SHOP</a>
+          </li>
+          <li>
+            <a href="./pages/contacto.html">CONTACTO</a>
+          </li>
+          <li>
+            <a href="./pages/login.html">LOGIN</a>
+          </li>
+          <li>
+            <a href="./pages/carrito.html">CARRITO</a>
+          </li>
+        </ul>
+    
+      </nav>
+      
+    </header>
+
+    <!-- buscador -->
+    <aside>
+
+      <form action="">
+
+        <div>
+          <label for="buscar_producto">BUSCAR</label>
+          <input type="text" id="buscar_producto" name="buscar" placeholder="item o categoría">
+        </div>
+
+        <div>
+          <label for="ordenar_producto">ORDENAR</label>
+          <select name="ordenar" id="ordenar_producto">
+            <option value="mayor">Mayor a Menor</option>
+            <option value="menor">Menor a Mayor</option>
+          </select>
+        </div>
+
+
+        <div>
+          <label>PRECIO</label>
+          <div>
+            <label for="precio_minimo_producto">MIN</label>
+            <input type="number" name="precio_minimo" id="precio_minimo_producto" min="1" placeholder="0">
+            <span>-</span>
+            <label for="precio_maximo_producto">MAX</label>
+            <input type="number" name="precio_maximo" id="precio_maximo_producto" min="1" placeholder="0">
+          </div>
+        </div>
+
+        <div>
+          <label>FILTRAR</label>
+          <ul>
+            <li>
+              <input type="checkbox" name="nuevo" id="filtrar_producto_nuevo">
+              <label for="filtrar_producto_nuevo">NUEVOS</label>
+            </li>
+            <li>
+              <input type="checkbox" name="oferta" id="filtrar_producto_oferta">
+              <label for="filtrar_producto_oferta">OFERTAS</label>
+            </li>
+            <li>
+              <input type="checkbox" name="edicion" id="filtrar_producto_edicion">
+              <label for="filtrar_producto_edicion">EDICIÓN ESPECIAL</label>
+            </li>
+            <li>
+              <input type="checkbox" name="favorito" id="filtrar_producto_favorito">
+              <label for="filtrar_producto_favorito">FAVORITOS</label>
+            </li>
+          </ul>
+        </div>
+
+      </form>
+
+    </aside>
+
+    <!-- productos -->
+    <main>      
+
+      <ul>
+        <li>
+          <article>
+            <a href="">
+              <picture>
+                <img src="./img/star-wars/trooper-1.webp" alt="Figura Coleccionable Funko de un Stormtrooper">
+              </picture>
+              <div>
+                <p>STAR WARS</p>
+                <h4>STORMTROOPER LIGHTSABER</h3>
+                <p>$ 1.799,99 -</p>
+                <p>3 Cuotas sin Interés</p>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <a href="">
+              <picture>
+                <img src="./img/pokemon/pidgeotto-1.webp" alt="Figura Coleccionable Funko del Pokemon Pidgeotto">
+              </picture>
+              <div>
+                <p>POKEMON</p>
+                <h4>PIDGEOTTO</h3>
+                <p>$ 1.799,99 -</p>
+                <p>3 Cuotas sin Interés</p>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article>
+            <a href="">
+              <picture>
+                <img src="./img/harry-potter/luna-1.webp" alt="Figura Coleccionable Funko del Personaje Luna con Máscara de Leon en la Serie de Harry Potter">
+              </picture>
+              <div>
+                <p>HARRY POTTER</p>
+                <h4>LUNA LOVEGOOD LION MASK</h3>
+                <p>$ 1.799,99 -</p>
+                <p>3 Cuotas sin Interés</p>
+              </div>
+            </a>
+          </article>
+        </li>
+      </ul>
+
+      <form action="">
+        <button><</button>
+        <button>1</button>
+        <button>2</button>
+        <button>...</button>
+        <button>9</button>
+        <button>10</button>
+        <button>></button>
+      </form>
+
+    </main>
+
+    <footer>
+
+      <nav>
+
+        <ul>
+          <li>
+            <a href="./pages/shop.html">SHOP</a>
+          </li>
+          <li>
+            <a href="./pages/registrar.html">REGISTRARSE</a>
+          </li>
+          <li>
+            <a href="./pages/login.html">LOGIN</a>
+          </li>
+          <li>
+            <a href="./pages/contacto.html">CONTACTO</a>
+          </li>
+        </ul>
+
+        <picture>
+          <img src="./img/branding/isotype.svg" alt="">
+        </picture>          
+
+      </nav>
+
+      <p>All rights reserved 2023 - Funkoshop &copy;</p>
+
+    </footer>
+    
+  </body>
+
+</html>
