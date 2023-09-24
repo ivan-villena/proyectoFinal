@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shop</title>
+    <title>SHOP</title>
   </head>
 
   <body>
@@ -37,65 +37,66 @@
       
     </header>
 
-    <!-- buscador -->
-    <aside>
-
-      <form action="">
-
-        <div>
-          <label for="buscar_producto">BUSCAR</label>
-          <input type="text" id="buscar_producto" name="buscar" placeholder="item o categoría">
-        </div>
-
-        <div>
-          <label for="ordenar_producto">ORDENAR</label>
-          <select name="ordenar" id="ordenar_producto">
-            <option value="mayor">Mayor a Menor</option>
-            <option value="menor">Menor a Mayor</option>
-          </select>
-        </div>
-
-
-        <div>
-          <label>PRECIO</label>
-          <div>
-            <label for="precio_minimo_producto">MIN</label>
-            <input type="number" name="precio_minimo" id="precio_minimo_producto" min="1" placeholder="0">
-            <span>-</span>
-            <label for="precio_maximo_producto">MAX</label>
-            <input type="number" name="precio_maximo" id="precio_maximo_producto" min="1" placeholder="0">
-          </div>
-        </div>
-
-        <div>
-          <label>FILTRAR</label>
-          <ul>
-            <li>
-              <input type="checkbox" name="nuevo" id="filtrar_producto_nuevo">
-              <label for="filtrar_producto_nuevo">NUEVOS</label>
-            </li>
-            <li>
-              <input type="checkbox" name="oferta" id="filtrar_producto_oferta">
-              <label for="filtrar_producto_oferta">OFERTAS</label>
-            </li>
-            <li>
-              <input type="checkbox" name="edicion" id="filtrar_producto_edicion">
-              <label for="filtrar_producto_edicion">EDICIÓN ESPECIAL</label>
-            </li>
-            <li>
-              <input type="checkbox" name="favorito" id="filtrar_producto_favorito">
-              <label for="filtrar_producto_favorito">FAVORITOS</label>
-            </li>
-          </ul>
-        </div>
-
-      </form>
-
-    </aside>
-
     <!-- productos -->
-    <main>      
+    <main>
 
+      <!-- buscador -->
+      <aside>
+
+        <form action="">
+
+          <div>
+            <label for="buscar_producto">BUSCAR</label>
+            <input type="text" id="buscar_producto" name="buscar" placeholder="item o categoría">
+          </div>
+
+          <div>
+            <label for="ordenar_producto">ORDENAR</label>
+            <select name="ordenar" id="ordenar_producto">
+              <option value="mayor">Mayor a Menor</option>
+              <option value="menor">Menor a Mayor</option>
+            </select>
+          </div>
+
+
+          <div>
+            <label>PRECIO</label>
+            <div>
+              <label for="precio_minimo_producto">MIN</label>
+              <input type="number" name="precio_minimo" id="precio_minimo_producto" min="1" placeholder="0">
+              <span>-</span>
+              <label for="precio_maximo_producto">MAX</label>
+              <input type="number" name="precio_maximo" id="precio_maximo_producto" min="1" placeholder="0">
+            </div>
+          </div>
+
+          <div>
+            <label>FILTRAR</label>
+            <ul>
+              <li>
+                <input type="checkbox" name="nuevo" id="filtrar_producto_nuevo">
+                <label for="filtrar_producto_nuevo">NUEVOS</label>
+              </li>
+              <li>
+                <input type="checkbox" name="oferta" id="filtrar_producto_oferta">
+                <label for="filtrar_producto_oferta">OFERTAS</label>
+              </li>
+              <li>
+                <input type="checkbox" name="edicion" id="filtrar_producto_edicion">
+                <label for="filtrar_producto_edicion">EDICIÓN ESPECIAL</label>
+              </li>
+              <li>
+                <input type="checkbox" name="favorito" id="filtrar_producto_favorito">
+                <label for="filtrar_producto_favorito">FAVORITOS</label>
+              </li>
+            </ul>
+          </div>
+
+        </form>
+
+      </aside>      
+
+      <!-- articulos por producto -->
       <ul>
         <li>
           <article>
@@ -144,6 +145,7 @@
         </li>
       </ul>
 
+      <!-- paginación -->
       <form action="">
         <button><</button>
         <button>1</button>

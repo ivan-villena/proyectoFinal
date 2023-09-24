@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MODIFICAR PRODUCTO</title>
+  </head>
+
+  <body>
+
+    <header>
+
+      <nav>
+    
+        <a href="../Index.html">
+          <img src="../img/branding/logo_light_horizontal.svg" alt="Logotipo con Nombre">
+        </a>
+    
+        <ul>
+          <li>
+            <a href="shop.html">SHOP</a>
+          </li>
+          <li>
+            <a href="contacto.html">CONTACTO</a>
+          </li>
+          <li>
+            <a href="login.html">LOGIN</a>
+          </li>
+          <li>
+            <a href="carrito.html">CARRITO</a>
+          </li>
+        </ul>
+    
+      </nav>
+      
+    </header>
+
+    <main>
+
+      <article>
+        <h2>EDITAR ITEM</h2>
+
+        <form action="#">
+
+          <fieldset>
+
+            <div>
+              <label for="producto-categoria">Categoría:</label>
+              <select name="categoria" id="producto-categoria">
+                <option value="" default >Seleccionar</option>
+                <option value="figuras" selected >Figuras</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="producto-licencia">Licencia:</label>
+              <select name="licencia" id="producto-licencia">
+                <option value="" default >Seleccionar</option>
+                <option value="naruto-shippuden" selected >Naruto Shippuden</option>
+              </select>
+            </div>          
+
+          </fieldset>
+
+          <fieldset>
+
+            <div>
+              <label for="producto-nombre">Nombre del Producto:</label>
+              <input type="text" name="nombre" id="producto-nombre" value="Kakashi Hatake Shippuden Saga">
+            </div>
+
+          </fieldset>
+          
+          <fieldset>
+
+            <textarea name="descripcion" id="producto-descripcion" cols="30" rows="10" placeholder="Descripción del Producto">Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shippuden invocando chidori.</textarea>
+
+          </fieldset>
+
+          <fieldset>
+
+            <div>
+              <label for="producto-SKU">SKU:</label>
+              <input type="text" name="SKU" id="producto-SKU" value="NAR001012">
+            </div>
+
+            <div>
+              <label for="producto-precio">Precio:</label>
+              <input type="text" name="precio" id="producto-precio" value="$ 1.799,00">
+            </div>
+
+            <div>
+              <label for="producto-stock">Stock:</label>
+              <input type="number" name="stock" id="producto-stock" value="10">
+            </div>
+            
+          </fieldset>
+
+          <fieldset>
+
+            <div>
+              <label for="producto-descuento">Descuento:</label>
+              <input type="text" name="descuento" id="producto-descuento" value="10%">
+            </div>
+
+            <div>
+              <label for="producto-cuotas">Cuotas:</label>
+              <select name="cuotas" id="producto-cuotas">
+                <option value="" default >Seleccionar</option>
+                <option value="3">3 Cuotas sin Interés</option>
+                <option value="6" selected >6 Cuotas sin Interés</option>
+              </select>
+            </div>
+
+          </fieldset>
+
+          <fieldset>
+
+            <div>
+              <label for="producto-imagenes">Imágenes:</label>
+              <input type="file" name="imagenes" id="producto-imagenes" accept="image/*" multiple >
+            </div>
+            
+            <div>
+              
+              <figure>
+                <img src="../img/naturo/_" alt="Figura de Frente">
+                <figcaption>Frente</figcaption>
+              </figure>
+
+              <figure>
+                <img src="../img/naturo/_" alt="Figura de Dorso">
+                <figcaption>Dorso</figcaption>
+              </figure>
+
+            </div>
+
+          </fieldset>
+
+          <fieldset>
+
+            <button type="submit" class="" onsubmit="">Modificar Producto</button>
+
+          </fieldset>
+
+        </form>
+      </article>
+      
+    </main>
+
+    <footer>
+
+      <nav>
+
+        <ul>
+          <li>
+            <a href="shop.html">SHOP</a>
+          </li>
+          <li>
+            <a href="registrar.html">REGISTRARSE</a>
+          </li>
+          <li>
+            <a href="login.html">LOGIN</a>
+          </li>
+          <li>
+            <a href="contacto.html">CONTACTO</a>
+          </li>
+        </ul>
+
+        <picture>
+          <img src="../img/branding/isotype.svg" alt="Logotipo">
+        </picture>          
+
+      </nav>
+
+      <p>All rights reserved 2023 - Funkoshop &copy;</p>
+
+    </footer>
+    
+  </body>
+
+</html>
