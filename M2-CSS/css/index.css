@@ -621,15 +621,13 @@ select.form__control {
 
 }
 /* ul */
-.pagination__items {
-  list-style: none;
-  display: grid;
-  grid: repeat(3,1fr) / repeat(3,1fr);
+.pagination__items {  
+  display: flex;
+  flex-wrap: wrap;
 }
 /* ul > li */
 .pagination__item {
-  border-color: var(--light-solid)
-  
+  flex: 1 1 clamp(250px, 30%, 30%);
 }
 
 /* form de controles  */
