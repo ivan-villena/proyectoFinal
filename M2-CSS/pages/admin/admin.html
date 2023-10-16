@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LISTADO DE PRODUCTOS</title>
+  </head>
+
+  <body>
+
+    <header class="header">
+
+      <nav class="navbar">
+
+        <picture class="navbar__logo">
+
+          <a href="#">
+
+            <img src="../../img/branding/logo_light_horizontal.svg" alt="Logotipo con Nombre">
+          </a>
+        </picture>
+
+        <ul class="navbar__menu">
+
+          <li class="navbar__item with-submenu">
+
+            <a class="navbar__link with-icon" href="../../pages/tienda/shop.html">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+            
+            <!-- menú desplegable -->
+            <ul class="submenu">
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Funkos</a>
+              </li>
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Remeras</a>
+              </li>
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">LLaveros</a>
+              </li>
+            </ul>
+
+          </li>
+
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/contacto.html">CONTACTO</a>
+          </li>
+
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/login.html">LOGIN</a>
+          </li>
+
+          <li class="navbar__item">
+            <a class="navbar__cart" href="../../pages/tienda/cart.html">
+              <img src="../../img/icons/cart-icon.svg" alt="ícono de carrito">
+            </a>
+          </li>
+        </ul>
+    
+      </nav>
+      
+    </header>
+
+    <main class="main-container">
+
+      <article class="container">
+
+        <form action="">
+          <img src="../../img/icons/search_icon.svg" alt="Lupa para Buscar">
+          <input type="text" name="buscar" id="producto-buscar" placeholder="Código, nombre o categoría...">
+        </form>
+
+        <div>
+          <h2>Listado de Productos</h2>
+
+          <form action="">
+            <label for="producto-agregar">Agregar</label>
+            <button type="submit">
+              <img src="../../img/icons/cart-icon.svg" alt="Símbolo de Sumar">
+            </button>
+          </form>          
+        </div>
+        
+        <table>
+
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Código</th>
+              <th>Nombre del Producto</th>
+              <th>Categoría</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>STW001001</td>
+              <td>Baby Yoda Blueball</td>
+              <td>STAR WARS</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>STW001002</td>
+              <td>Boba Fett Fighter</td>
+              <td>STAR WARS</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>STW001003</td>
+              <td>Luke Skywalker & Grogu</td>
+              <td>STAR WARS</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>STW001004</td>
+              <td>Stormtrooper Lightsaber</td>
+              <td>STAR WARS</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>PKM001001</td>
+              <td>Charmander Smiley</td>
+              <td>POKEMON</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>PKM001002</td>
+              <td>Dragonite Hi!</td>
+              <td>POKEMON</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>PKM001003</td>
+              <td>Pidgeotto flying</td>
+              <td></td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>PKM001004</td>
+              <td>Pikachu Smiley</td>
+              <td>POKEMON</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>PKM001005</td>
+              <td>Vulpix Fancy</td>
+              <td>POKEMON</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>HPT001001</td>
+              <td>Harry Potter & Hegwid</td>
+              <td>HARRY POTTER</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>HPT001002</td>
+              <td>Herminione Ball Dress</td>
+              <td>HARRY POTTER</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>HPT001003</td>
+              <td>Luna Lovewood Lion Mask</td>
+              <td>HARRY POTTER</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>HPT001004</td>
+              <td>Snape Patronus</td>
+              <td>HARRY POTTER</td>
+              <td>
+                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              </td>
+            </tr>                                                                                                                                    
+          
+          </tbody>
+
+        </table>
+
+      </article>
+
+    </main>
+
+    <footer class="footer">
+
+      <nav class="navbar container">
+
+        <!-- enlaces -->
+        <ul class="navbar__items">
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/tienda/shop.html">SHOP</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/register.html">REGISTRARSE</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/login.html">LOGIN</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/contacto.html">CONTACTO</a>
+          </li>
+        </ul>
+
+        <!-- logo -->
+        <picture>
+          <img src="../../img/branding/isotype.svg" alt="Logotipo">
+        </picture>          
+
+      </nav>
+
+      <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+
+    </footer>
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </body>
+
+</html>

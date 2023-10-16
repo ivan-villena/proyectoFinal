@@ -1,0 +1,115 @@
+/* /////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////// */
+/*  
+  formularios
+*/
+.form {
+
+}
+
+.form label {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* 
+  En Vertical 
+*/
+.form__item {
+  display: flex;
+  flex-direction: column;
+}
+.form__item > label {    
+  font-size: var(--font-large);
+  padding: var(--spacing-12) 0;
+}
+
+/* 
+  En horizontal
+*/
+.form__group {
+  display: flex;
+  align-items: center;
+}
+.form__group > label {
+  font-size: var(--font-small);
+  margin-right: .5em;
+}
+
+/*  
+  Para Campos: label: input
+*/
+.form__field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form__field > label {
+  font-weight: 400;
+  font-size: var(--font-large);
+}
+
+/* 
+  controles 
+*/
+.form__button {
+  min-width: fit-content;
+  padding: var(--spacing-12);
+  background-color: var(--primary-solid);
+  color: var(--light-solid);
+}
+
+.form__control {
+  padding: var(--spacing-8);  
+  border-radius: 6px;
+  border-bottom: 2px solid var(--primary-solid);
+  background-color: var(--light-bg-solid);
+  color: #B9B9B9;
+}
+
+select.form__control {
+  border: 2px solid var(--dark-solid);
+}
+
+[type="checkbox"].form__control {
+  width: 2px solid var(--control-border);
+  width: 24px;
+  height: 24px;
+}
+
+[type="checkbox"].form__control + label {
+  font-size: var(--font-medium);
+}
+
+/* Textos y Selectores */
+.form__control:not([type="checkbox"],[type="radio"],[type="number"]) {
+  width: 20.4em;
+}
+
+/* Número */
+.form__control[type="number"] {
+  max-width: 6em;
+}
+
+/* 
+  Controlador numerico 
+*/
+.form__number {
+  display: flex;
+}
+.form__number .form__control {
+  max-width: 6em;
+}
+.form__number .number__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.form__number .number__buttons button {  
+  width: 1.2em;
+  height: 1.2em;
+  margin-left: .5em;
+  background-color: var(--dark-bg-solid);
+  color: var(--light-solid);  
+}
+

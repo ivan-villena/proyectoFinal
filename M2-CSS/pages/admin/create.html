@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AGREGAR PRODUCTO</title>
+  </head>
+
+  <body>
+
+    <header class="header">
+
+      <nav class="navbar">
+
+        <picture class="navbar__logo">
+
+          <a href="#">
+
+            <img src="../../img/branding/logo_light_horizontal.svg" alt="Logotipo con Nombre">
+          </a>
+        </picture>
+
+        <ul class="navbar__menu">
+
+          <li class="navbar__item with-submenu">
+
+            <a class="navbar__link with-icon" href="../../pages/tienda/shop.html">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+            
+            <!-- menú desplegable -->
+            <ul class="submenu">
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Funkos</a>
+              </li>
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Remeras</a>
+              </li>
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">LLaveros</a>
+              </li>
+            </ul>
+
+          </li>
+
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/contacto.html">CONTACTO</a>
+          </li>
+
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/login.html">LOGIN</a>
+          </li>
+
+          <li class="navbar__item">
+            <a class="navbar__cart" href="../../pages/tienda/cart.html">
+              <img src="../../img/icons/cart-icon.svg" alt="ícono de carrito">
+            </a>
+          </li>
+        </ul>
+    
+      </nav>
+      
+    </header>
+
+    <main class="main-container">
+
+      <article class="container">
+        <h2>CREAR NUEVO ITEM</h2>
+
+        <form action="#">
+
+          <fieldset>
+
+            <div>
+              <label for="producto-categoria">Categoría:</label>
+              <select name="categoria" id="producto-categoria">
+                <option value="" default="1">Seleccionar</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="producto-licencia">Licencia:</label>
+              <select name="licencia" id="producto-licencia">
+                <option value="" default="1">Seleccionar</option>
+              </select>
+            </div>          
+
+          </fieldset>
+
+          <fieldset>
+
+            <div>
+              <label for="producto-nombre">Nombre del Producto:</label>
+              <input type="text" name="nombre" id="producto-nombre" >
+            </div>
+
+          </fieldset>
+          
+          <fieldset>
+
+            <textarea name="descripcion" id="producto-descripcion" cols="30" rows="10" placeholder="Descripción del Producto">Descripción del Producto</textarea>
+
+          </fieldset>
+
+          <fieldset>
+
+            <div>
+              <label for="producto-SKU">SKU:</label>
+              <input type="text" name="SKU" id="producto-SKU" value="SSK111AB001">
+            </div>
+
+            <div>
+              <label for="producto-precio">Precio:</label>
+              <input type="text" name="precio" id="producto-precio" value="$ 0.000,00">
+            </div>
+
+            <div>
+              <label for="producto-stock">Stock:</label>
+              <input type="number" name="stock" id="producto-stock" value="0">
+            </div>
+            
+          </fieldset>
+
+          <fieldset>
+
+            <div>
+              <label for="producto-descuento">Descuento:</label>
+              <input type="text" name="descuento" id="producto-descuento" value="0%">
+            </div>
+
+            <div>
+              <label for="producto-cuotas">Cuotas:</label>
+              <select name="cuotas" id="producto-cuotas">
+                <option value="" default="1">Seleccionar</option>
+                <option value="3" selected >3 Cuotas sin Interés</option>
+              </select>
+            </div>
+
+          </fieldset>
+
+          <fieldset>
+
+            <div>
+              <label for="producto-imagenes">Imágenes:</label>
+              <input type="file" name="imagenes" id="producto-imagenes" accept="image/*" multiple>
+            </div>          
+
+          </fieldset>
+
+          <fieldset>
+
+            <button type="submit" class="" onsubmit="">Agregar Producto</button>
+
+            <button type="reset" class="">Limpiar</button>
+
+          </fieldset>
+
+        </form>
+        
+      </article>
+
+    </main>
+
+    <footer class="footer">
+
+      <nav class="navbar container">
+
+        <!-- enlaces -->
+        <ul class="navbar__items">
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/tienda/shop.html">SHOP</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/register.html">REGISTRARSE</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/login.html">LOGIN</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/contacto.html">CONTACTO</a>
+          </li>
+        </ul>
+
+        <!-- logo -->
+        <picture>
+          <img src="../../img/branding/isotype.svg" alt="Logotipo">
+        </picture>          
+
+      </nav>
+
+      <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+
+    </footer>
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </body>
+
+</html>
