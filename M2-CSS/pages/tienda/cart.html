@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>CARRITO</title>
+
+    <!-- estilos globales -->
+    <link rel="stylesheet" href="../../css/index.css">        
+    <!-- estilos por página -->
+    <link rel="stylesheet" href="../../css/cart.css">
+
   </head>
 
   <body>
@@ -67,10 +73,12 @@
 
     <main class="main-container">
 
+      <!-- Listado -->
       <section class="container">
-        <h2>CARRITO DE COMPRAS</h2>
 
-        <table>
+        <h2>CARRITO DE COMPRAS</h2>
+        
+        <table class="cart-list">
 
           <thead>
             <tr>
@@ -84,7 +92,7 @@
           <tbody>
 
             <!-- item 1 -->
-            <tr>
+            <tr class="cart-list__item">
               <!-- ficha -->
               <td>
                 <section>
@@ -113,18 +121,18 @@
               </td>
               <!-- eliminar item -->
               <td>
-                <img src=".../img/icons/delete_trash.svg" alt="">
+                <img src="../../img/icons/delete_trash.svg" alt="">
               </td>              
             </tr>
 
             <!-- item 2 -->
-            <tr>
+            <tr class="cart-list__item">
               <!-- ficha -->
               <td>
                 <section>
                   
                   <picture>
-                    <img src=".../img/pokemon/pidgeotto-1.webp" alt="Figura Coleccionable Funko de Pidgeotto de la Serie Pokemon">
+                    <img src="../../img/pokemon/pidgeotto-1.webp" alt="Figura Coleccionable Funko de Pidgeotto de la Serie Pokemon">
                   </picture>
 
                   <article>
@@ -147,7 +155,7 @@
               </td>
               <!-- eliminar item -->
               <td>
-                <img src=".../img/icons/delete_trash.svg" alt="">
+                <img src="../../img/icons/delete_trash.svg" alt="">
               </td>              
             </tr>            
 
@@ -157,10 +165,12 @@
 
       </section>
 
+      <!-- Resuemen -->
       <section class="container">
+
         <h2>RESUMEN</h2>
 
-        <table>
+        <table class="cart-summary">
 
           <tbody>
             <!-- cantidad -->
@@ -192,7 +202,11 @@
 
         </table>
 
-        <a href="">Ir a Pagar</a>
+        <form class="form" action="">
+
+          <button class="control_button">Ir a Pagar</a>
+
+        </form>
 
       </section>
 
