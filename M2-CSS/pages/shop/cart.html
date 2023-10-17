@@ -7,8 +7,13 @@
 
     <title>CARRITO</title>
 
+    <!-- Componentes -->
+    <link rel="stylesheet" href="../../css/component/table.css">
+    <link rel="stylesheet" href="../../css/component/product.css">
+
     <!-- estilos globales -->
-    <link rel="stylesheet" href="../../css/index.css">        
+    <link rel="stylesheet" href="../../css/index.css">
+
     <!-- estilos por página -->
     <link rel="stylesheet" href="../../css/pages/cart.css">
 
@@ -74,87 +79,112 @@
     <main class="main-container">
 
       <!-- Listado -->
-      <section class="container">
+      <section class="products container">
 
-        <h2>CARRITO DE COMPRAS</h2>
+        <h2 class="title">CARRITO DE COMPRAS</h2>
         
-        <table class="cart-list">
+        <table class="table">
 
           <thead>
-            <tr>
-              <th>DETALLE DEL PRODUCTO</th>
-              <th>CANTIDAD</th>
-              <th>TOTAL</th>
-              <th></th>
+
+            <tr class="table__item">
+              <th class="table__column">DETALLE DEL PRODUCTO</th>
+              <th class="table__column">CANTIDAD</th>
+              <th class="table__column">TOTAL</th>
+              <th class="table__column"></th>
             </tr>
+
           </thead>
 
           <tbody>
 
             <!-- item 1 -->
-            <tr class="cart-list__item">
+            <tr class="table__item">
               <!-- ficha -->
-              <td>
-                <section>
+              <td class="table__data">
+                <section class="product">
                   
-                  <picture>
+                  <picture class="product__cover">
                     <img src="../../img/star-wars/baby-yoda-1.webp" alt="Figura Coleccionable Funko de Grogu de la Serie The Mandalorian">
                   </picture>
 
-                  <article>
-                    <h4>BABY YODA BLUEBALL</h4>
-                    <p>STAR WARS</p>
-                    <p>precio: $ 1.799,99</p>
+                  <article class="product__content">
+                    <h4 class="product__name">BABY YODA BLUEBALL</h4>
+                    <p class="product__licence">STAR WARS</p>
+                    <p class="product__price">precio: $1.799,99</p>
                   </article>
 
                 </section>
               </td>
               <!-- cantidades -->
-              <td>
-                <form action="">
-                  <input type="number" name="cantidad" id="item_1_cantidad" value="2">
+              <td class="table__data">
+                <form action="" class="product__modify form">
+
+                  <div class="form__number">
+      
+                    <input class="form__control" type="text" name="cantidad" id="item_1-cantidad" value="2">
+    
+                    <span class="number__buttons">
+                      <button type="button" class="number__button--add">+</button>
+                      <button type="button" class="number__button--remove">-</button>
+                    </span>
+    
+                  </div>
+      
                 </form>
               </td>
               <!-- total en pesos -->
-              <td>
-                <p class="total">$ 3.599,98</p>
+              <td class="table__data">
+                <p class="product__total">$3.599,98</p>
               </td>
               <!-- eliminar item -->
-              <td>
+              <td class="table__data">
                 <img src="../../img/icons/delete_trash.svg" alt="">
               </td>              
             </tr>
 
             <!-- item 2 -->
-            <tr class="cart-list__item">
+            <tr class="table__item">
+
               <!-- ficha -->
-              <td>
-                <section>
+              <td class="table__data">
+                <section class="product">
                   
-                  <picture>
+                  <picture class="product__cover">
                     <img src="../../img/pokemon/pidgeotto-1.webp" alt="Figura Coleccionable Funko de Pidgeotto de la Serie Pokemon">
                   </picture>
 
-                  <article>
-                    <h4>PIDGEOTTO</h4>
-                    <p>POKEMON</p>
-                    <p>precio: $ 1.799,99</p>
+                  <article class="product__content">
+                    <h4 class="product__name">PIDGEOTTO</h4>
+                    <p class="product__licence">POKEMON</p>
+                    <p class="product__price">precio: $1.799,99</p>
                   </article>
 
                 </section>
               </td>
               <!-- cantidades -->
-              <td>
-                <form action="">
-                  <input type="number" name="cantidad" id="item_2_cantidad" value="1">
+              <td class="table__data">
+                <form action="" class="product__modify form">
+
+                  <div class="form__number">
+      
+                    <input class="form__control" type="text" name="cantidad" id="item_2-cantidad" value="1">
+    
+                    <span class="number__buttons">
+                      <button type="button" class="number__button--add">+</button>
+                      <button type="button" class="number__button--remove">-</button>
+                    </span>
+    
+                  </div>
+      
                 </form>
               </td>
               <!-- total en pesos -->
-              <td>
-                <p class="total">$ 1.799,99</p>
+              <td class="table__data">
+                <p class="product__total">$1.799,99</p>
               </td>
               <!-- eliminar item -->
-              <td>
+              <td class="table__data">
                 <img src="../../img/icons/delete_trash.svg" alt="">
               </td>              
             </tr>            
@@ -166,45 +196,37 @@
       </section>
 
       <!-- Resuemen -->
-      <section class="container">
+      <section class="summary container">
 
-        <h2>RESUMEN</h2>
-
-        <table class="cart-summary">
-
-          <tbody>
-            <!-- cantidad -->
-            <tr>
-              <th>Cantidad de Elementos</th>
-              <td>3</td>
-            </tr>
-
-            <!-- subtotal -->
-            <tr>
-              <th>Subtotal</th>
-              <td>$ 5.399,97</td>
-            </tr>
-
-            <!-- envío -->
-            <tr>
-              <th>Envío</th>
-              <td>$ 0,00</td>
-            </tr>
-          </tbody>
-
-          <tfoot>
-            <!-- total -->
-            <tr>
-              <th>Total</th>
-              <td>$ 5.399,97</td>
-            </tr>
-          </tfoot>
-
-        </table>
+        <h2 class="title">RESUMEN</h2>
 
         <form class="form" action="">
 
-          <button class="control_button">Ir a Pagar</a>
+          <fieldset class="form__item">
+
+            <div class="form__group">
+              <label class="form__label">Cantidad de Elementos</label>
+              <span class="form__value number summary__cantidad">3</span>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label">Subtotal</label>
+              <span class="form__value number summary__subtotal">$5.399,97</span>
+            </div>
+            
+            <div class="form__group">
+              <label class="form__label">Envío</label>
+              <span class="form__value number summary__envio">$0,00</span>
+            </div>
+            
+            <div class="form__group">
+              <label class="form__label">Total</label>
+              <span class="form__value number summary__total">$5.399,97</span>
+            </div>       
+            
+          </fieldset>
+
+          <button type="submit" class="form__button line">Ir a Pagar</a>
 
         </form>
 

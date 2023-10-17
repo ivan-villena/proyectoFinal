@@ -1,0 +1,62 @@
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*  
+  Titulos de la pagina  
+*/
+.title {
+  border-bottom: 1px solid var(--primary-solid);
+}
+
+/*  
+  Carrito: ( listado de productos ) 
+*/
+
+.products .table .product__cover {
+  max-width: 250px;
+}
+
+.products .table .table__item {
+  box-shadow: var(--border-shadow);
+  margin-bottom: 3em;
+}
+
+.products .table .form__number .number__buttons button {
+  background-color: var(--primary-solid);  
+}
+
+/* 
+  Resumen
+*/
+.summary {
+  text-align: right;
+}
+
+.summary .title {
+  margin-bottom: var(--spacing-20);
+}
+
+.summary .form {
+  max-width: fit-content;
+  margin-left: auto;
+}
+
+.summary .form__label {
+  text-align: left;
+}
+
+.summary .form__item {
+  box-shadow: var(--border-shadow);
+  font-size: var(--font-large);
+  margin-bottom: var(--spacing-20);
+  padding: var(--spacing-24);
+  gap: var(--spacing-20);
+}
+
+.summary .form__group {
+  justify-content: space-between;
+}
+
+.summary .form__button {
+  text-transform: uppercase;
+  font-size: var(--font-xlarge);
+}

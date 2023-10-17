@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>SHOP</title>
-    
+
+    <!-- Componentes -->
+    <link rel="stylesheet" href="../../css/component/form.css">
+    <link rel="stylesheet" href="../../css/component/card.css">
+    <link rel="stylesheet" href="../../css/component/pagination.css">
+
     <!-- estilos globales -->
-    <link rel="stylesheet" href="../../css/index.css">        
+    <link rel="stylesheet" href="../../css/index.css">      
+
     <!-- estilos por página -->
     <link rel="stylesheet" href="../../css/pages/shop.css">
     
@@ -105,20 +111,20 @@
 
           <div class="form__item">
             <label>FILTRAR</label>
-            <ul>
-              <li>
+            <ul class="checklist">
+              <li class="checklist__item">
                 <input class="form__control" type="checkbox" name="nuevo" id="filtrar_producto_nuevo">
                 <label class="form__label" for="filtrar_producto_nuevo">NUEVOS</label>
               </li>
-              <li>
+              <li class="checklist__item">
                 <input class="form__control" type="checkbox" name="oferta" id="filtrar_producto_oferta">
                 <label class="form__label" for="filtrar_producto_oferta">OFERTAS</label>
               </li>
-              <li>
+              <li class="checklist__item">
                 <input class="form__control" type="checkbox" name="edicion" id="filtrar_producto_edicion">
                 <label class="form__label" for="filtrar_producto_edicion">EDICIÓN ESPECIAL</label>
               </li>
-              <li>
+              <li class="checklist__item">
                 <input class="form__control" type="checkbox" name="favorito" id="filtrar_producto_favorito">
                 <label class="form__label" for="filtrar_producto_favorito">FAVORITOS</label>
               </li>
@@ -133,7 +139,7 @@
       <section class="pagination container separate-1">
 
         <!-- Grilla de 3 x 3 -->
-        <ul class="pagination__items">
+        <ul class="pagination__list">
 
           <li class="pagination__item">
             
