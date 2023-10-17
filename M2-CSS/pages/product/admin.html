@@ -54,13 +54,13 @@
 
     <main class="main-container">
 
-      <article class="container">
+      <article class="admin container">
 
-        <form class="form" action="">
+        <form class="form admin__search" action="">
 
           <fieldset class="form__row">
 
-            <img class="form__icon" src="../../img/icons/search_icon.svg" alt="Lupa para Buscar">
+            <img class="icon" src="../../img/icons/search_icon.svg" alt="Lupa para Buscar">
 
             <input class="form__control" type="text" name="buscar" id="producto-buscar" placeholder="Código, nombre o categoría...">
 
@@ -68,161 +68,239 @@
 
         </form>
 
-        <div>
-          <h2>Listado de Productos</h2>
+        <div class="admin__title flex-row justify-between">
 
-          <form class="form" action="">
+          <h2 class="title">Listado de Productos</h2>
 
-            <label class="form__label" for="producto-agregar">Agregar</label>
+          <form class="form with-icon" action="">
 
-            <button type="submit">
-              <img src="../../img/icons/cart-icon.svg" alt="Símbolo de Sumar">
-            </button>
+            <label class="form__label add" for="producto-agregar">AGREGAR</label>
+
+            <button class="form__button add" type="submit">+</button>
 
           </form>
+
         </div>
         
         <table class="table">
 
           <thead class="table__head">
-            <tr>
-              <th>ID</th>
-              <th>Código</th>
-              <th>Nombre del Producto</th>
-              <th>Categoría</th>
-              <th></th>
+            <tr class="table__item">
+              <th class="table__column">ID</th>
+              <th class="table__column">Código</th>
+              <th class="table__column">Nombre del Producto</th>
+              <th class="table__column">Categoría</th>
+              <th class="table__column"></th>
             </tr>
           </thead>
 
           <tbody class="table__body">
-            <tr>
-              <td>1</td>
-              <td>STW001001</td>
-              <td>Baby Yoda Blueball</td>
-              <td>STAR WARS</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">1</td>
+              <td class="table__data">STW001001</td>
+              <td class="table__data">Baby Yoda Blueball</td>
+              <td class="table__data">STAR WARS</td>
+              <td class="table__data">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>2</td>
-              <td>STW001002</td>
-              <td>Boba Fett Fighter</td>
-              <td>STAR WARS</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">2</td>
+              <td class="table__data">STW001002</td>
+              <td class="table__data">Boba Fett Fighter</td>
+              <td class="table__data">STAR WARS</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>3</td>
-              <td>STW001003</td>
-              <td>Luke Skywalker & Grogu</td>
-              <td>STAR WARS</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">3</td>
+              <td class="table__data">STW001003</td>
+              <td class="table__data">Luke Skywalker & Grogu</td>
+              <td class="table__data">STAR WARS</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>4</td>
-              <td>STW001004</td>
-              <td>Stormtrooper Lightsaber</td>
-              <td>STAR WARS</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">4</td>
+              <td class="table__data">STW001004</td>
+              <td class="table__data">Stormtrooper Lightsaber</td>
+              <td class="table__data">STAR WARS</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>5</td>
-              <td>PKM001001</td>
-              <td>Charmander Smiley</td>
-              <td>POKEMON</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">5</td>
+              <td class="table__data">PKM001001</td>
+              <td class="table__data">Charmander Smiley</td>
+              <td class="table__data">POKEMON</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>6</td>
-              <td>PKM001002</td>
-              <td>Dragonite Hi!</td>
-              <td>POKEMON</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">6</td>
+              <td class="table__data">PKM001002</td>
+              <td class="table__data">Dragonite Hi!</td>
+              <td class="table__data">POKEMON</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>7</td>
-              <td>PKM001003</td>
-              <td>Pidgeotto flying</td>
-              <td></td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">7</td>
+              <td class="table__data">PKM001003</td>
+              <td class="table__data">Pidgeotto flying</td>
+              <td class="table__data">POKEMON</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>8</td>
-              <td>PKM001004</td>
-              <td>Pikachu Smiley</td>
-              <td>POKEMON</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">8</td>
+              <td class="table__data">PKM001004</td>
+              <td class="table__data">Pikachu Smiley</td>
+              <td class="table__data">POKEMON</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>9</td>
-              <td>PKM001005</td>
-              <td>Vulpix Fancy</td>
-              <td>POKEMON</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">9</td>
+              <td class="table__data">PKM001005</td>
+              <td class="table__data">Vulpix Fancy</td>
+              <td class="table__data">POKEMON</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>10</td>
-              <td>HPT001001</td>
-              <td>Harry Potter & Hegwid</td>
-              <td>HARRY POTTER</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">10</td>
+              <td class="table__data">HPT001001</td>
+              <td class="table__data">Harry Potter & Hegwid</td>
+              <td class="table__data">HARRY POTTER</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>11</td>
-              <td>HPT001002</td>
-              <td>Herminione Ball Dress</td>
-              <td>HARRY POTTER</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">11</td>
+              <td class="table__data">HPT001002</td>
+              <td class="table__data">Herminione Ball Dress</td>
+              <td class="table__data">HARRY POTTER</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>12</td>
-              <td>HPT001003</td>
-              <td>Luna Lovewood Lion Mask</td>
-              <td>HARRY POTTER</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">12</td>
+              <td class="table__data">HPT001003</td>
+              <td class="table__data">Luna Lovewood Lion Mask</td>
+              <td class="table__data">HARRY POTTER</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>13</td>
-              <td>HPT001004</td>
-              <td>Snape Patronus</td>
-              <td>HARRY POTTER</td>
-              <td>
-                <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
-                <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+            <tr class="table__item">
+              <td class="table__data">13</td>
+              <td class="table__data">HPT001004</td>
+              <td class="table__data">Snape Patronus</td>
+              <td class="table__data">HARRY POTTER</td>
+              <td class="table__data with-icon">
+                <form class="with-icon" action="">
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+                  </button>
+                  <button type="button" class="icon">
+                    <img src="../../img/icons/delete_trash.svg" alt="Tacho para Descartar">
+                  </button>
+                </form>
               </td>
             </tr>                                                                                                                                    
           

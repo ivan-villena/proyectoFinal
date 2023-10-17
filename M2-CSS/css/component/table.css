@@ -1,20 +1,16 @@
 
 .table {
   width: 100%;
-}
-
-thead .table__item {  
-  border-radius: 10px;  
+  font-size: var(--font-large);
 }
 
 .table__column {
   text-align: center;
   text-transform: uppercase;
-  font-size: var(--font-small);
+  font-weight: 700;
   padding: var(--spacing-16);
 }
 
-tbody .table__item {
-  border-radius: 25px;  
+.table__data {
+  padding-bottom: var(--spacing-16);
 }
-

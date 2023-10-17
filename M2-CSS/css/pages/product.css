@@ -9,13 +9,7 @@
 }
 
 .form__button {
-
+  width: 175px;
   font-weight: 600;
   font-size: var(--font-xsmall);
-}
-
-/* renglones */
-.form__row {
-
-  justify-content: space-evenly;
 }

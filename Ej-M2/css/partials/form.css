@@ -89,11 +89,11 @@ textarea::placeholder {
     font-size: var(--font-xsmall);
 }
 
-.form__link {
+.link {
     color: var(--secondary-solid);
 }
 
-.form__link:hover {
+.link:hover {
     color: var(--secodary-300);
 }
 

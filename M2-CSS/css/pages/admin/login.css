@@ -8,6 +8,6 @@
   margin: auto;
 }
 
-.login .form__link {
+.login .link {
   font-size: var(--font-xsmall);
 }

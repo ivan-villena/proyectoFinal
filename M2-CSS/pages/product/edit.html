@@ -54,24 +54,25 @@
 
     <main class="main-container">
 
-      <article class="container">
-        <h2>EDITAR ITEM</h2>
+      <article class="product__edit container">
 
-        <form action="#">
+        <h2 class="title">EDITAR ITEM</h2>
 
-          <fieldset>
+        <form class="form" action="#">
 
-            <div>
-              <label for="producto-categoria">Categoría:</label>
-              <select name="categoria" id="producto-categoria">
+          <fieldset class="form__row">
+
+            <div class="form__field">
+              <label class="form__label" for="producto-categoria">Categoría:</label>
+              <select class="form__control" name="categoria" id="producto-categoria">
                 <option value="" default >Seleccionar</option>
                 <option value="figuras" selected >Figuras</option>
               </select>
             </div>
 
-            <div>
-              <label for="producto-licencia">Licencia:</label>
-              <select name="licencia" id="producto-licencia">
+            <div class="form__field">
+              <label class="form__label" for="producto-licencia">Licencia:</label>
+              <select class="form__control" name="licencia" id="producto-licencia">
                 <option value="" default >Seleccionar</option>
                 <option value="naruto-shippuden" selected >Naruto Shippuden</option>
               </select>
@@ -79,50 +80,48 @@
 
           </fieldset>
 
-          <fieldset>
+          <fieldset class="form__col">
 
-            <div>
-              <label for="producto-nombre">Nombre del Producto:</label>
-              <input type="text" name="nombre" id="producto-nombre" value="Kakashi Hatake Shippuden Saga">
+            <div class="form__field">
+              <label class="form__label" for="producto-nombre">Nombre del Producto:</label>
+              <input class="form__control" type="text" name="nombre" id="producto-nombre" value="Kakashi Hatake Shippuden Saga">
+            </div>
+
+            <div class="form__field">
+              <textarea class="form__control" name="descripcion" id="producto-descripcion" cols="30" rows="10" placeholder="Descripción del Producto">Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shippuden invocando chidori.</textarea>              
             </div>
 
           </fieldset>
-          
-          <fieldset>
 
-            <textarea name="descripcion" id="producto-descripcion" cols="30" rows="10" placeholder="Descripción del Producto">Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shippuden invocando chidori.</textarea>
+          <fieldset class="form__row">
 
-          </fieldset>
-
-          <fieldset>
-
-            <div>
-              <label for="producto-SKU">SKU:</label>
-              <input type="text" name="SKU" id="producto-SKU" value="NAR001012">
+            <div class="form__field">
+              <label class="form__label" for="producto-SKU">SKU:</label>
+              <input class="form__control" type="text" name="SKU" id="producto-SKU" value="NAR001012">
             </div>
 
-            <div>
-              <label for="producto-precio">Precio:</label>
-              <input type="text" name="precio" id="producto-precio" value="$ 1.799,00">
+            <div class="form__field">
+              <label class="form__label" for="producto-precio">Precio:</label>
+              <input class="form__control" type="text" name="precio" id="producto-precio" value="$ 1.799,00">
             </div>
 
-            <div>
-              <label for="producto-stock">Stock:</label>
-              <input type="number" name="stock" id="producto-stock" value="10">
+            <div class="form__field">
+              <label class="form__label" for="producto-stock">Stock:</label>
+              <input class="form__control" type="number" name="stock" id="producto-stock" value="10">
             </div>
             
           </fieldset>
 
-          <fieldset>
+          <fieldset class="form__row">
 
-            <div>
-              <label for="producto-descuento">Descuento:</label>
-              <input type="text" name="descuento" id="producto-descuento" value="10%">
+            <div class="form__field">
+              <label class="form__label" for="producto-descuento">Descuento:</label>
+              <input class="form__control" type="text" name="descuento" id="producto-descuento" value="10%">
             </div>
 
-            <div>
-              <label for="producto-cuotas">Cuotas:</label>
-              <select name="cuotas" id="producto-cuotas">
+            <div class="form__field">
+              <label class="form__label" for="producto-cuotas">Cuotas:</label>
+              <select class="form__control" name="cuotas" id="producto-cuotas">
                 <option value="" default >Seleccionar</option>
                 <option value="3">3 Cuotas sin Interés</option>
                 <option value="6" selected >6 Cuotas sin Interés</option>
@@ -131,14 +130,14 @@
 
           </fieldset>
 
-          <fieldset>
+          <fieldset class="form__row">
 
-            <div>
-              <label for="producto-imagenes">Imágenes:</label>
-              <input type="file" name="imagenes" id="producto-imagenes" accept="image/*" multiple >
+            <div class="form__field">
+              <label class="form__label" for="producto-imagenes">Imágenes:</label>
+              <input class="form__control" type="file" name="imagenes" id="producto-imagenes" accept="image/*" multiple >
             </div>
             
-            <div>
+            <div class="form__field">
               
               <figure>
                 <img src="../../img/naturo/_" alt="Figura de Frente">
@@ -154,13 +153,14 @@
 
           </fieldset>
 
-          <fieldset>
+          <fieldset class="form__row form__buttons">
 
-            <button type="submit" class="" onsubmit="">Modificar Producto</button>
+            <button class="form__button" type="submit" onsubmit="">Modificar Producto</button>
 
           </fieldset>
 
         </form>
+
       </article>
       
     </main>

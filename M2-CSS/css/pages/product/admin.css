@@ -1,0 +1,9 @@
+
+.admin__search {
+  margin-top: var(--spacing-28);
+}
+
+.form__label.add {
+  font-weight: 700;
+  font-size: var(--font-large);
+}

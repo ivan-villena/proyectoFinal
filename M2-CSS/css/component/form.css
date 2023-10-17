@@ -17,28 +17,28 @@
   botones de accion
 */
 .form__button {
-  min-width: fit-content;
   padding: var(--spacing-12);
   background-color: var(--primary-solid);
   color: var(--light-solid);
 }
 
+/* contenedor horizontal */
+.form__row.form__buttons .form__button {
+  margin-left: var(--spacing-8);
+}
+
+/* todo el ancho */
 .form__button.line {
   width: 100%;
 }
 
-.form__link {
-  font-weight: 400;  
-  color: var(--secondary-solid);
-}
-
-/* ////////////////////////////////////////////// */
-/* ////////////////////////////////////////////// */
-/* 
-  valores
-*/
-.form__value {
-  color: var(--control-value);
+/* agregar */
+.form__button.add {
+  padding: 0;
+  width: var(--font-medium);
+  height: var(--font-medium);
+  font-weight: 900;
+  border-radius: 3px;
 }
 
 /* ////////////////////////////////////////////// */
@@ -77,9 +77,18 @@ select.form__control {
   margin-bottom: .5em;
 }
 
+/* archivos */
+.form__control[type="file"] {
+  border: 0;
+}
+
 /* Textos y Selectores */
-.form__control:not([type="checkbox"],[type="radio"],[type="number"]) {
+.form__control:not([type="checkbox"],[type="radio"],[type="number"],textarea) {
   width: 20.4em;
+}
+
+textarea.form__control {
+  width: 100%;
 }
 
 /* Número */
@@ -139,7 +148,6 @@ select.form__control {
 .form__field {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: var(--spacing-16);
 }
 
@@ -148,9 +156,15 @@ select.form__control {
   font-size: var(--font-large);
 }
 
-.form__field .form__control { 
+.form__field .form__control {   
+  margin-left: var(--spacing-8);
+}
+.form__field .form__control:not(select,textarea,[type="file"]){
   border: 0;
   border-radius: 0;
   border-bottom: 2px solid var(--primary-solid);
-  margin-left: var(--spacing-8);
+}
+
+.form__row .form__field {
+  margin-right: var(--spacing-8);
 }

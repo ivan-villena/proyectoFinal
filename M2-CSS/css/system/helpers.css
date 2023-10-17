@@ -14,11 +14,6 @@
   margin: 0 auto;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;  
-}
-
 /* /////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////// */
 /* 
@@ -48,4 +43,63 @@
 .separate-1 {
   margin-left: 1em;
   margin-right: 1em;
+}
+
+/* /////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////// */
+/* Distribucion */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-start {
+  align-items: start;
+  align-content: start;
+}
+.align-center {
+  align-items: center;
+  align-content: center;
+}
+.align-end {
+  align-items: end;
+  align-content: end;
+}
+.align-around {
+  align-content: space-around;  
+}
+.align-between {  
+  align-content: space-between;  
+}
+.align-evenly {
+  align-content: space-evenly;
+}
+
+.justify-start {
+  justify-content: start;
+  justify-items: start;
+}
+.justify-center {
+  justify-content: center;
+  justify-items: center;
+}
+.justify-end {
+  justify-content: start;
+  justify-items: start;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-between {  
+  justify-content: space-between;  
+}
+.justify-evenly {
+  justify-content: space-evenly;
 }

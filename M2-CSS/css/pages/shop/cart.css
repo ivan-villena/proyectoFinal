@@ -10,6 +10,9 @@
 /*  
   Carrito: ( listado de productos ) 
 */
+.table__head > .table__item {  
+  border-radius: 10px;  
+}
 
 .products .table .product__cover {
   max-width: 250px;
@@ -17,6 +20,7 @@
 
 .products .table .table__item {
   box-shadow: var(--border-shadow);
+  border-radius: 25px;
   margin-bottom: 3em;
 }
 

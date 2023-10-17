@@ -48,3 +48,27 @@
   font-weight: 700;
   margin: var(--spacing-36) 0;
 }
+
+/* 
+  enlaces 
+*/
+.link {
+  font-weight: 400;  
+  color: var(--secondary-solid);
+}
+
+/* 
+  iconos 
+*/
+.icon {
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
+}
+
+/* 
+  valores
+*/
+.value {
+  color: var(--control-value);
+}
