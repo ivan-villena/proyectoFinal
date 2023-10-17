@@ -3,17 +3,18 @@
   width: 100%;
 }
 
-.table thead .table__item {  
+thead .table__item {  
   border-radius: 10px;  
 }
 
 .table__column {
   text-align: center;
   text-transform: uppercase;
+  font-size: var(--font-small);
   padding: var(--spacing-16);
 }
 
-.table tbody .table__item {
+tbody .table__item {
   border-radius: 25px;  
 }
 

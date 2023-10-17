@@ -37,11 +37,12 @@
 
 .summary .form {
   max-width: fit-content;
-  margin-left: auto;
+  margin-left: auto;  
 }
 
 .summary .form__label {
   text-align: left;
+  font-size: var(--font-small);
 }
 
 .summary .form__item {

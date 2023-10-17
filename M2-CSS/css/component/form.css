@@ -19,7 +19,7 @@
 /* ////////////////////////////////////////////// */
 /* ////////////////////////////////////////////// */
 /* 
-  controles 
+  botones de accion
 */
 .form__button {
   min-width: fit-content;
@@ -32,11 +32,25 @@
   width: 100%;
 }
 
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* 
+  valores
+*/
+.form__value {
+  color: var(--control-value);
+}
+
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* 
+  controles 
+*/
 .form__control {
   padding: var(--spacing-8);  
   border-radius: 6px;
   background-color: var(--light-bg-solid);
-  color: #B9B9B9;
+  color: var(--control-value);
 }
 
 select.form__control {

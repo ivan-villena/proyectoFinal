@@ -33,6 +33,7 @@
   --control-border: #DFE3E8;
   --control-enabled: #DFE3E8;
   --control-disabled: #919EAB;
+  --control-value: #747474;
 
   /* tipografias */
   --base-font: 'Inter', sans-serif;
