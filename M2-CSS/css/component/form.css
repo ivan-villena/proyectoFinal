@@ -7,11 +7,6 @@
 
 }
 
-.form label {
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
 .form fieldset { 
   border-radius: 10px;
 }
@@ -30,6 +25,11 @@
 
 .form__button.line {
   width: 100%;
+}
+
+.form__link {
+  font-weight: 400;  
+  color: var(--secondary-solid);
 }
 
 /* ////////////////////////////////////////////// */
@@ -58,25 +58,23 @@ select.form__control {
 }
 
 /* checkbox */
-[type="checkbox"].form__control {
-  width: 2px solid var(--control-border);
+.form__control[type="checkbox"] {
+  border: 2px solid var(--control-border);
   width: 24px;
   height: 24px;
 }
 
-[type="checkbox"].form__control + label {
-  font-size: var(--font-medium);
-}
-
-/* Listado de checks */
-.form .checklist .checklist__item {
+.check__item {
   display: flex;
-  align-items: center;
-  margin-bottom: .5em;
+  align-items: center;  
 }
 
-.form .checklist .checklist__item > input + label {
+.check__item > input + .form__label {
   margin-left: .25em;
+}
+/* Listado de checks */
+.check__list .check__item {
+  margin-bottom: .5em;
 }
 
 /* Textos y Selectores */
@@ -114,11 +112,11 @@ select.form__control {
 /* 
   En Vertical 
 */
-.form__item {
+.form__col {
   display: flex;
   flex-direction: column;
 }
-.form__item > label {    
+.form__col > label {    
   font-size: var(--font-large);
   padding: var(--spacing-12) 0;
 }
@@ -126,27 +124,33 @@ select.form__control {
 /* 
   En horizontal
 */
-.form__group {
+.form__row {
   display: flex;
   align-items: center;
 }
-.form__group > label {
-  font-size: var(--font-small);
+.form__row > .form__label {
+
   margin-right: .5em;
 }
 
 /*  
-  Para Campos: label: input
+  Para Campos : label: input
 */
 .form__field {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: var(--spacing-16);
 }
-.form__field > label {
+
+.form__field .form__label {
   font-weight: 400;
   font-size: var(--font-large);
 }
+
 .form__field .form__control { 
+  border: 0;
+  border-radius: 0;
   border-bottom: 2px solid var(--primary-solid);
+  margin-left: var(--spacing-8);
 }

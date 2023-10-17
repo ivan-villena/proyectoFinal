@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>LOGIN</title>
+
+    <!-- estilos globales -->
+    <link rel="stylesheet" href="../../css/index.css">
+
+    <!-- Componentes -->
+    <link rel="stylesheet" href="../../css/component/card.css">    
+
+    <!-- estilos por página -->
+    <link rel="stylesheet" href="../../css/pages/admin.css">
+    <link rel="stylesheet" href="../../css/pages/admin/login.css">
+
   </head>
 
   <body>
@@ -24,40 +35,16 @@
 
         <ul class="navbar__menu">
 
-          <li class="navbar__item with-submenu">
-
-            <a class="navbar__link with-icon" href="../../pages/shop/shop.html">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
-            
-            <!-- menú desplegable -->
-            <ul class="submenu">
-
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Funkos</a>
-              </li>
-
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Remeras</a>
-              </li>
-
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">LLaveros</a>
-              </li>
-            </ul>
-
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../index.html">VER TIENDA</a>
           </li>
 
           <li class="navbar__item">
-            <a class="navbar__link" href="../../pages/admin/contacto.html">CONTACTO</a>
+            <a class="navbar__link" href="../../pages/admin/admin.html">ADMIN</a>
           </li>
 
           <li class="navbar__item">
-            <a class="navbar__link" href="../../pages/admin/login.html">LOGIN</a>
-          </li>
-
-          <li class="navbar__item">
-            <a class="navbar__cart" href="../../pages/shop/cart.html">
-              <img src="../../img/icons/cart-icon.svg" alt="ícono de carrito">
-            </a>
+            <a class="navbar__link" href="#">SALIR</a>
           </li>
         </ul>
     
@@ -67,48 +54,47 @@
 
     <main class="main-container">
 
-      <article class="container">
+      <section class="login container">
         
-        <h2>INGRESAR A MI CUENTA</h2>
+        <h2 class="title login__title">INGRESAR A MI CUENTA</h2>
 
-        <form action="">
+        <article class="login__content">
 
-          <fieldset>
+          <form class="form" action="">
 
-            <div>
-              <label for="usuario-email">Email:</label>
-              <input type="email" name="email" id="usuario-email" placeholder="johndoe@correo.com">
-            </div>
-    
-            <div>
-              <label for="usuario-contraseña">Contraseña:</label>
-              <input type="password" name="contraseña" id="usuario-contraseña" placeholder="*********">
-            </div>
+            <fieldset class="form__col">
+  
+              <div class="form__field">
+                <label class="form__label" for="usuario-email">Email:</label>
+                <input class="form__control" type="email" name="email" id="usuario-email" placeholder="johndoe@correo.com">
+              </div>
+      
+              <div class="form__field">
+                <label class="form__label" for="usuario-contraseña">Contraseña:</label>
+                <input class="form__control" type="password" name="contraseña" id="usuario-contraseña" placeholder="*********">
+              </div>
+  
+            </fieldset>
+  
+            <fieldset class="form__row">
+  
+              <button class="form__button" type="submit">Ingresar</button>
+  
+              <div class="check__item">
+                <input class="form__control" type="checkbox" name="recordarme" id="usuario-recordarme">
+                <label class="form__label" for="usuario-recordarme">Recordarme</label>
+              </div>
+  
+            </fieldset>
+  
+            <fieldset>
+              <a class="form__link" href="#">Olvidé mi Contraseña</a>
+            </fieldset>
+  
+          </form>
+        </article>
 
-          </fieldset>
-
-          <fieldset>
-
-            <button type="submit">Ingresar</button>
-
-            <div>
-              <input type="checkbox" name="recordarme" id="usuario-recordarme">
-              <label for="usuario-recordarme">Recordarme</label>
-            </div>
-
-          </fieldset>
-
-          <fieldset>
-
-            <div>
-              <a href="#">Olvidé mi Contraseña</a>
-            </div>
-
-          </fieldset>
-
-        </form>
-
-      </article>
+      </section>
 
     </main>
 

@@ -1,0 +1,21 @@
+
+/* 
+  FORMS 
+*/
+
+.form__label {
+
+  font-weight: 400;
+}
+
+.form__button {
+
+  font-weight: 600;
+  font-size: var(--font-xsmall);
+}
+
+/* renglones */
+.form__row {
+
+  justify-content: space-evenly;
+}

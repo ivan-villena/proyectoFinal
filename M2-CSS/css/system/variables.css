@@ -42,11 +42,13 @@
   /* Tamaños de Fuentes */
   --font-display: 4.6em; /* 46px */
   --font-jumbo: 3.8em; /* 38px */ 
+  --font-xxlarge: 3.2em; /* 32px */ 
   --font-xlarge: 3em; /* 30px */
   --font-large: 2.4em; /* 24px */
   --font-medium: 1.8em; /* 18px */
   --font-small: 1.6em; /* 16px */
   --font-xsmall: 1.4em; /* 14px */
+  --font-xxsmall: 1.2em; /* 12px */
 
   /* Espaciados */
   --spacing-128: 12.8rem; /* 128px */ 

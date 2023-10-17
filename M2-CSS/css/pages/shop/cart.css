@@ -45,7 +45,7 @@
   font-size: var(--font-small);
 }
 
-.summary .form__item {
+.summary .form__col {
   box-shadow: var(--border-shadow);
   font-size: var(--font-large);
   margin-bottom: var(--spacing-20);
@@ -53,11 +53,13 @@
   gap: var(--spacing-20);
 }
 
-.summary .form__group {
+.summary .form__row {
+
   justify-content: space-between;
 }
 
 .summary .form__button {
+  
   text-transform: uppercase;
   font-size: var(--font-xlarge);
 }

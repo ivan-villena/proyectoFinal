@@ -1,18 +1,22 @@
 
-/*  
-  Seccion Principal
-*/
-main.container {
-  margin-top: 6em;
-}
-
 /* 
-  Formularios
+  FORMS 
 */
-aside .form__control {
-  border: 2px solid var(--dark-solid);
+
+/* etiquetas */
+.form__label {
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-/*  
-  Componentes
-*/
+/* ...para checkbox */
+.form__control[type="checkbox"] + .form__label {
+
+  font-size: var(--font-medium);
+}
+
+/* ...en renglones */
+.form__row .form__label {
+
+  font-size: var(--font-small);
+}

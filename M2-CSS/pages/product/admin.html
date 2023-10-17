@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>LISTADO DE PRODUCTOS</title>
+
+    <!-- estilos globales -->
+    <link rel="stylesheet" href="../../css/index.css">    
+
+    <!-- Componentes -->
+    <link rel="stylesheet" href="../../css/component/table.css">
+
+    <!-- estilos por página -->
+    <link rel="stylesheet" href="../../css/pages/product.css">
+    <link rel="stylesheet" href="../../css/pages/product/admin.css">
+
   </head>
 
   <body>
@@ -24,40 +35,16 @@
 
         <ul class="navbar__menu">
 
-          <li class="navbar__item with-submenu">
-
-            <a class="navbar__link with-icon" href="../../pages/shop/shop.html">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
-            
-            <!-- menú desplegable -->
-            <ul class="submenu">
-
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Funkos</a>
-              </li>
-
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Remeras</a>
-              </li>
-
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">LLaveros</a>
-              </li>
-            </ul>
-
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../index.html">VER TIENDA</a>
           </li>
 
           <li class="navbar__item">
-            <a class="navbar__link" href="../../pages/admin/contacto.html">CONTACTO</a>
+            <a class="navbar__link" href="../../pages/admin/admin.html">ADMIN</a>
           </li>
 
           <li class="navbar__item">
-            <a class="navbar__link" href="../../pages/admin/login.html">LOGIN</a>
-          </li>
-
-          <li class="navbar__item">
-            <a class="navbar__cart" href="../../pages/shop/cart.html">
-              <img src="../../img/icons/cart-icon.svg" alt="ícono de carrito">
-            </a>
+            <a class="navbar__link" href="#">SALIR</a>
           </li>
         </ul>
     
@@ -69,25 +56,35 @@
 
       <article class="container">
 
-        <form action="">
-          <img src="../../img/icons/search_icon.svg" alt="Lupa para Buscar">
-          <input type="text" name="buscar" id="producto-buscar" placeholder="Código, nombre o categoría...">
+        <form class="form" action="">
+
+          <fieldset class="form__row">
+
+            <img class="form__icon" src="../../img/icons/search_icon.svg" alt="Lupa para Buscar">
+
+            <input class="form__control" type="text" name="buscar" id="producto-buscar" placeholder="Código, nombre o categoría...">
+
+          </fieldset>
+
         </form>
 
         <div>
           <h2>Listado de Productos</h2>
 
-          <form action="">
-            <label for="producto-agregar">Agregar</label>
+          <form class="form" action="">
+
+            <label class="form__label" for="producto-agregar">Agregar</label>
+
             <button type="submit">
               <img src="../../img/icons/cart-icon.svg" alt="Símbolo de Sumar">
             </button>
-          </form>          
+
+          </form>
         </div>
         
-        <table>
+        <table class="table">
 
-          <thead>
+          <thead class="table__head">
             <tr>
               <th>ID</th>
               <th>Código</th>
@@ -97,7 +94,7 @@
             </tr>
           </thead>
 
-          <tbody>
+          <tbody class="table__body">
             <tr>
               <td>1</td>
               <td>STW001001</td>

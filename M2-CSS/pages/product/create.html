@@ -5,7 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MODIFICAR PRODUCTO</title>
+    <title>AGREGAR PRODUCTO</title>
+
+    <!-- estilos globales -->
+    <link rel="stylesheet" href="../../css/index.css">    
+
+    <!-- Componentes -->
+    <link rel="stylesheet" href="../../css/component/card.css">
+
+    <!-- estilos por página -->
+    <link rel="stylesheet" href="../../css/pages/product.css">
+    <link rel="stylesheet" href="../../css/pages/product/create.css">
+        
   </head>
 
   <body>
@@ -24,40 +35,16 @@
 
         <ul class="navbar__menu">
 
-          <li class="navbar__item with-submenu">
-
-            <a class="navbar__link with-icon" href="../../pages/shop/shop.html">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
-            
-            <!-- menú desplegable -->
-            <ul class="submenu">
-
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Funkos</a>
-              </li>
-
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Remeras</a>
-              </li>
-
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">LLaveros</a>
-              </li>
-            </ul>
-
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../index.html">VER TIENDA</a>
           </li>
 
           <li class="navbar__item">
-            <a class="navbar__link" href="../../pages/admin/contacto.html">CONTACTO</a>
+            <a class="navbar__link" href="../../pages/admin/admin.html">ADMIN</a>
           </li>
 
           <li class="navbar__item">
-            <a class="navbar__link" href="../../pages/admin/login.html">LOGIN</a>
-          </li>
-
-          <li class="navbar__item">
-            <a class="navbar__cart" href="../../pages/shop/cart.html">
-              <img src="../../img/icons/cart-icon.svg" alt="ícono de carrito">
-            </a>
+            <a class="navbar__link" href="#">SALIR</a>
           </li>
         </ul>
     
@@ -68,7 +55,7 @@
     <main class="main-container">
 
       <article class="container">
-        <h2>EDITAR ITEM</h2>
+        <h2>CREAR NUEVO ITEM</h2>
 
         <form action="#">
 
@@ -77,16 +64,14 @@
             <div>
               <label for="producto-categoria">Categoría:</label>
               <select name="categoria" id="producto-categoria">
-                <option value="" default >Seleccionar</option>
-                <option value="figuras" selected >Figuras</option>
+                <option value="" default="1">Seleccionar</option>
               </select>
             </div>
 
             <div>
               <label for="producto-licencia">Licencia:</label>
               <select name="licencia" id="producto-licencia">
-                <option value="" default >Seleccionar</option>
-                <option value="naruto-shippuden" selected >Naruto Shippuden</option>
+                <option value="" default="1">Seleccionar</option>
               </select>
             </div>          
 
@@ -96,14 +81,14 @@
 
             <div>
               <label for="producto-nombre">Nombre del Producto:</label>
-              <input type="text" name="nombre" id="producto-nombre" value="Kakashi Hatake Shippuden Saga">
+              <input type="text" name="nombre" id="producto-nombre" >
             </div>
 
           </fieldset>
           
           <fieldset>
 
-            <textarea name="descripcion" id="producto-descripcion" cols="30" rows="10" placeholder="Descripción del Producto">Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shippuden invocando chidori.</textarea>
+            <textarea name="descripcion" id="producto-descripcion" cols="30" rows="10" placeholder="Descripción del Producto">Descripción del Producto</textarea>
 
           </fieldset>
 
@@ -111,17 +96,17 @@
 
             <div>
               <label for="producto-SKU">SKU:</label>
-              <input type="text" name="SKU" id="producto-SKU" value="NAR001012">
+              <input type="text" name="SKU" id="producto-SKU" value="SSK111AB001">
             </div>
 
             <div>
               <label for="producto-precio">Precio:</label>
-              <input type="text" name="precio" id="producto-precio" value="$ 1.799,00">
+              <input type="text" name="precio" id="producto-precio" value="$ 0.000,00">
             </div>
 
             <div>
               <label for="producto-stock">Stock:</label>
-              <input type="number" name="stock" id="producto-stock" value="10">
+              <input type="number" name="stock" id="producto-stock" value="0">
             </div>
             
           </fieldset>
@@ -130,15 +115,14 @@
 
             <div>
               <label for="producto-descuento">Descuento:</label>
-              <input type="text" name="descuento" id="producto-descuento" value="10%">
+              <input type="text" name="descuento" id="producto-descuento" value="0%">
             </div>
 
             <div>
               <label for="producto-cuotas">Cuotas:</label>
               <select name="cuotas" id="producto-cuotas">
-                <option value="" default >Seleccionar</option>
-                <option value="3">3 Cuotas sin Interés</option>
-                <option value="6" selected >6 Cuotas sin Interés</option>
+                <option value="" default="1">Seleccionar</option>
+                <option value="3" selected >3 Cuotas sin Interés</option>
               </select>
             </div>
 
@@ -148,34 +132,23 @@
 
             <div>
               <label for="producto-imagenes">Imágenes:</label>
-              <input type="file" name="imagenes" id="producto-imagenes" accept="image/*" multiple >
-            </div>
-            
-            <div>
-              
-              <figure>
-                <img src="../../img/naturo/_" alt="Figura de Frente">
-                <figcaption>Frente</figcaption>
-              </figure>
-
-              <figure>
-                <img src="../../img/naturo/_" alt="Figura de Dorso">
-                <figcaption>Dorso</figcaption>
-              </figure>
-
-            </div>
+              <input type="file" name="imagenes" id="producto-imagenes" accept="image/*" multiple>
+            </div>          
 
           </fieldset>
 
           <fieldset>
 
-            <button type="submit" class="" onsubmit="">Modificar Producto</button>
+            <button type="submit" class="" onsubmit="">Agregar Producto</button>
+
+            <button type="reset" class="">Limpiar</button>
 
           </fieldset>
 
         </form>
+        
       </article>
-      
+
     </main>
 
     <footer class="footer">
@@ -200,7 +173,7 @@
 
         <!-- logo -->
         <picture>
-          <img src="-./img/branding/isotype.svg" alt="Logotipo">
+          <img src="../../img/branding/isotype.svg" alt="Logotipo">
         </picture>          
 
       </nav>

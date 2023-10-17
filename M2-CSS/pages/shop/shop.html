@@ -7,16 +7,17 @@
 
     <title>SHOP</title>
 
+    <!-- estilos globales -->
+    <link rel="stylesheet" href="../../css/index.css">
+
     <!-- Componentes -->
     <link rel="stylesheet" href="../../css/component/form.css">
     <link rel="stylesheet" href="../../css/component/card.css">
     <link rel="stylesheet" href="../../css/component/pagination.css">
 
-    <!-- estilos globales -->
-    <link rel="stylesheet" href="../../css/index.css">      
-
     <!-- estilos por página -->
     <link rel="stylesheet" href="../../css/pages/shop.css">
+    <link rel="stylesheet" href="../../css/pages/shop/shop.css">
     
   </head>
 
@@ -85,12 +86,12 @@
 
         <form action="" class="form">
 
-          <div class="form__item">
+          <div class="form__col">
             <label class="form__label" for="buscar_producto">BUSCAR</label>
             <input class="form__control" type="text" id="buscar_producto" name="buscar" placeholder="item o categoría">
           </div>
 
-          <div class="form__item">
+          <div class="form__col">
             <label class="form__label" for="ordenar_producto">ORDENAR</label>
             <select class="form__control" name="ordenar" id="ordenar_producto">
               <option value="mayor">Mayor a Menor</option>
@@ -98,9 +99,9 @@
             </select>
           </div>
 
-          <div class="form__item">
+          <div class="form__col">
             <label>PRECIO</label>
-            <div class="form__group">
+            <div class="form__row">
               <label class="form__label" for="precio_minimo_producto">MIN</label>
               <input class="form__control" type="number" name="precio_minimo" id="precio_minimo_producto" min="1" placeholder="0">
               <span class="separate-1">-</span>
@@ -109,22 +110,22 @@
             </div>
           </div>
 
-          <div class="form__item">
+          <div class="form__col">
             <label>FILTRAR</label>
-            <ul class="checklist">
-              <li class="checklist__item">
+            <ul class="check__list">
+              <li class="check__item">
                 <input class="form__control" type="checkbox" name="nuevo" id="filtrar_producto_nuevo">
                 <label class="form__label" for="filtrar_producto_nuevo">NUEVOS</label>
               </li>
-              <li class="checklist__item">
+              <li class="check__item">
                 <input class="form__control" type="checkbox" name="oferta" id="filtrar_producto_oferta">
                 <label class="form__label" for="filtrar_producto_oferta">OFERTAS</label>
               </li>
-              <li class="checklist__item">
+              <li class="check__item">
                 <input class="form__control" type="checkbox" name="edicion" id="filtrar_producto_edicion">
                 <label class="form__label" for="filtrar_producto_edicion">EDICIÓN ESPECIAL</label>
               </li>
-              <li class="checklist__item">
+              <li class="check__item">
                 <input class="form__control" type="checkbox" name="favorito" id="filtrar_producto_favorito">
                 <label class="form__label" for="filtrar_producto_favorito">FAVORITOS</label>
               </li>
