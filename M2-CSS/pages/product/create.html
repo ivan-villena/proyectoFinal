@@ -65,14 +65,20 @@
             <div class="form__field">
               <label class="form__label" for="producto-categoria">Categoría:</label>
               <select class="form__control" name="categoria" id="producto-categoria">
-                <option value="" default="1">Seleccionar</option>
+                <option value="" disabled selected hidden>Seleccionar</option>
+                <option value="Figuras Coleccionables">Figuras</option>
+                <option value="Llaveros">Llaveros</option>
+                <option value="Remeras">Remeras</option>                
               </select>
             </div>
 
             <div class="form__field">
               <label class="form__label" for="producto-licencia">Licencia:</label>
               <select class="form__control" name="licencia" id="producto-licencia">
-                <option value="" default="1">Seleccionar</option>
+                <option value="" disabled selected hidden>Seleccionar</option>
+                <option value="starwars">Star Wars</option>
+                <option value="pokemon">Pokemon</option>
+                <option value="harrypotter">Harry Potter</option>
               </select>
             </div>          
 
@@ -120,8 +126,13 @@
             <div class="form__field">
               <label class="form__label" for="producto-cuotas">Cuotas:</label>
               <select class="form__control" name="cuotas" id="producto-cuotas">
-                <option value="" default="1">Seleccionar</option>
-                <option value="3" selected >3 Cuotas sin Interés</option>
+                <option value="0">Sin cuotas</option>
+                <option value="3">3 Cuotas sin Interés</option>
+                <option value="6" selected>6 Cuotas sin Interés</option>
+                <option value="9">9 cuotas sin interés</option>
+                <option value="12">12 cuotas sin interés</option>
+                <option value="18">18 cuotas sin interés</option>
+                <option value="24">24 cuotas sin interés</option>
               </select>
             </div>
 
@@ -132,7 +143,11 @@
             <div class="form__field">
               <label class="form__label" for="producto-imagenes">Imágenes:</label>
               <input class="form__control" type="file" name="imagenes" id="producto-imagenes" accept="image/*" multiple>
-            </div>          
+            </div>
+            
+            <div class="form__field">
+              
+            </div>            
 
           </fieldset>
 

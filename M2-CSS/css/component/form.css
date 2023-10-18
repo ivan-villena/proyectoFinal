@@ -14,6 +14,68 @@
 /* ////////////////////////////////////////////// */
 /* ////////////////////////////////////////////// */
 /* 
+  En Vertical 
+*/
+.form__col {
+  display: flex;
+  flex-direction: column;
+}
+.form__col > label {    
+  font-size: var(--font-large);
+  padding: var(--spacing-12) 0;
+}
+
+/* 
+  En horizontal
+*/
+.form__row {
+  display: flex;
+  align-items: center;
+}
+.form__row > .form__label {
+
+  margin-right: .5em;
+}
+
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/*  
+  Para Campos : label: input
+*/
+.form__field {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-16);
+}
+
+.form__field .form__label {
+  font-weight: 400;
+  font-size: var(--font-large);
+}
+
+.form__field .form__control {   
+  margin-left: var(--spacing-8);
+  color: var(--dark-solid);
+}
+
+.form__field .form__control[type="text"], 
+.form__field .form__control[type="number"],
+.form__field .form__control[type="email"],
+.form__field .form__control[type="password"],
+.form__field .form__control[type="telephone"] {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid var(--primary-solid);
+}
+
+/* en renglones */
+.form__row > .form__field {
+  margin-right: var(--spacing-8);
+}
+
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* 
   botones de accion
 */
 .form__button {
@@ -32,7 +94,7 @@
   width: 100%;
 }
 
-/* agregar */
+/* boton de agregar: "+" */
 .form__button.add {
   padding: 0;
   width: var(--font-medium);
@@ -77,23 +139,23 @@ select.form__control {
   margin-bottom: .5em;
 }
 
-/* archivos */
-.form__control[type="file"] {
-  border: 0;
-}
-
 /* Textos y Selectores */
-.form__control:not([type="checkbox"],[type="radio"],[type="number"],textarea) {
+select.form__control,
+.form__control[type="text"], 
+.form__control[type="password"],
+.form__control[type="email"] {
   width: 20.4em;
 }
 
 textarea.form__control {
   width: 100%;
+  font-size: var(--font-large);
 }
 
 /* Número */
 .form__control[type="number"] {
-  max-width: 6em;
+  width: 6em;
+  text-align: center;
 }
 
 /* 
@@ -118,53 +180,25 @@ textarea.form__control {
   color: var(--light-solid);  
 }
 
-/* 
-  En Vertical 
-*/
-.form__col {
-  display: flex;
-  flex-direction: column;
-}
-.form__col > label {    
-  font-size: var(--font-large);
-  padding: var(--spacing-12) 0;
-}
 
-/* 
-  En horizontal
-*/
-.form__row {
-  display: flex;
-  align-items: center;
-}
-.form__row > .form__label {
-
-  margin-right: .5em;
-}
-
-/*  
-  Para Campos : label: input
-*/
-.form__field {
-  display: flex;
-  align-items: center;
-  margin-bottom: var(--spacing-16);
-}
-
-.form__field .form__label {
-  font-weight: 400;
-  font-size: var(--font-large);
-}
-
-.form__field .form__control {   
-  margin-left: var(--spacing-8);
-}
-.form__field .form__control:not(select,textarea,[type="file"]){
+/* archivos */
+.form__control[type="file"] {
   border: 0;
-  border-radius: 0;
-  border-bottom: 2px solid var(--primary-solid);
 }
 
-.form__row .form__field {
-  margin-right: var(--spacing-8);
+/* imágenes */
+.form__images {
+  text-align: center;
+}
+.form__images .form__image:not(:last-child) {  
+  margin-right: var(--spacing-16);
+}
+.form__images .form__image img {
+  width: 150px;
+}
+.form__images .form__image figcaption {
+  font-weight: 500;
+  font-size: var(--font-medium);
+  border-top: 1px solid var(--primary-solid);
+  margin-top: var(--spacing-8);
 }

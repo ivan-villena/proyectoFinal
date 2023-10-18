@@ -60,21 +60,26 @@
 
         <form class="form" action="#">
 
-          <fieldset class="form__row">
+          <fieldset class="form__row justify-between">
 
             <div class="form__field">
               <label class="form__label" for="producto-categoria">Categoría:</label>
               <select class="form__control" name="categoria" id="producto-categoria">
-                <option value="" default >Seleccionar</option>
+                <option value="" disabled hidden>Seleccionar</option>
                 <option value="figuras" selected >Figuras</option>
+                <option value="Llaveros">Llaveros</option>
+                <option value="Remeras">Remeras</option>                 
               </select>
             </div>
 
             <div class="form__field">
               <label class="form__label" for="producto-licencia">Licencia:</label>
               <select class="form__control" name="licencia" id="producto-licencia">
-                <option value="" default >Seleccionar</option>
-                <option value="naruto-shippuden" selected >Naruto Shippuden</option>
+                <option value="" disabled hidden>Seleccionar</option>
+                <option value="naruto-shippuden" selected >Naruto Shippuden</option>                
+                <option value="starwars">Star Wars</option>
+                <option value="pokemon">Pokemon</option>
+                <option value="harrypotter">Harry Potter</option>                
               </select>
             </div>          
 
@@ -122,30 +127,34 @@
             <div class="form__field">
               <label class="form__label" for="producto-cuotas">Cuotas:</label>
               <select class="form__control" name="cuotas" id="producto-cuotas">
-                <option value="" default >Seleccionar</option>
+                <option value="0">Sin cuotas</option>
                 <option value="3">3 Cuotas sin Interés</option>
-                <option value="6" selected >6 Cuotas sin Interés</option>
+                <option value="6" selected>6 Cuotas sin Interés</option>
+                <option value="9">9 cuotas sin interés</option>
+                <option value="12">12 cuotas sin interés</option>
+                <option value="18">18 cuotas sin interés</option>
+                <option value="24">24 cuotas sin interés</option>                
               </select>
             </div>
 
           </fieldset>
 
-          <fieldset class="form__row">
+          <fieldset class="form__col">
 
             <div class="form__field">
               <label class="form__label" for="producto-imagenes">Imágenes:</label>
               <input class="form__control" type="file" name="imagenes" id="producto-imagenes" accept="image/*" multiple >
             </div>
             
-            <div class="form__field">
+            <div class="form__field form__images">
               
-              <figure>
-                <img src="../../img/naturo/_" alt="Figura de Frente">
+              <figure class="form__image">
+                <img src="../../img/pokemon/charmander-1.webp" alt="Figura de Frente">
                 <figcaption>Frente</figcaption>
               </figure>
 
-              <figure>
-                <img src="../../img/naturo/_" alt="Figura de Dorso">
+              <figure class="form__image">
+                <img src="../../img/pokemon/charmander-box.webp" alt="Figura de Dorso">
                 <figcaption>Dorso</figcaption>
               </figure>
 
@@ -187,7 +196,7 @@
 
         <!-- logo -->
         <picture>
-          <img src="-./img/branding/isotype.svg" alt="Logotipo">
+          <img src="../../img/branding/isotype.svg" alt="Logotipo">
         </picture>          
 
       </nav>
