@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>REGISTRO</title>
+
+    <!-- estilos globales -->
+    <link rel="stylesheet" href="../../css/index.css">
+
+    <!-- Componentes -->
+    <link rel="stylesheet" href="../../css/component/card.css">    
+
+    <!-- estilos por página -->
+    <link rel="stylesheet" href="../../css/pages/admin.css">
+    <link rel="stylesheet" href="../../css/pages/admin/register.css">
+
+  </head>
+
+  <body>
+
+    <header class="header">
+
+      <nav class="navbar">
+
+        <picture class="navbar__logo">
+
+          <a href="#">
+
+            <img src="../../img/branding/logo_light_horizontal.svg" alt="Logotipo con Nombre">
+          </a>
+        </picture>
+
+        <ul class="navbar__menu">
+
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../index.html">VER TIENDA</a>
+          </li>
+
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/admin.html">ADMIN</a>
+          </li>
+
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">SALIR</a>
+          </li>
+        </ul>
+    
+      </nav>
+      
+    </header>
+
+    <main class="main-container">
+
+      <article class="register container">
+
+        <h2 class="title">CREA TU CUENTA</h2>
+
+        <p class="text">Completa el formulario para ser parte del mundo de los Funkos</p>
+
+        <form class="form" action="">
+
+          <fieldset class="form__col">
+
+            <div class="form__field">
+              <label class="form__label" for="usuario-nombre">Nombre:</label>
+              <input class="form__control" type="text" name="nombre" id="usuario-nombre" placeholder="John">
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="usuario-apellido">Apellido:</label>
+              <input class="form__control" type="text" name="apellido" id="usuario-apellido" placeholder="Doe">
+            </div>
+
+          </fieldset>
+
+          <fieldset class="form__col">
+
+            <div class="form__field">
+              <label class="form__label" for="usuario-email">Email:</label>
+              <input class="form__control" type="email" name="email" id="usuario-email" placeholder="johndoe@correo.com">
+            </div>
+    
+            <div class="form__field">
+              <label class="form__label" for="usuario-contraseña">Contraseña:</label>
+              <input class="form__control" type="password" name="contraseña" id="usuario-contraseña" placeholder="*********">
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="usuario-contraseña_repetir">Repita Contraseña:</label>
+              <input class="form__control" type="password" name="contraseña_repetir" id="usuario-contraseña_repetir" placeholder="*********">
+            </div>            
+
+          </fieldset>
+
+          <fieldset class="form__row">
+
+            <button class="form__button" type="submit">Registrar</button>
+
+            <div class="check__item">
+              <input class="form__control" type="checkbox" name="acepta_terminos" id="usuario-acepta_terminos">
+              <label class="form__label" for="usuario-acepta_terminos">Acepto <a class="link" href="#">Términos y Condicines</a></label>
+            </div>
+
+          </fieldset>
+
+        </form>
+
+      </article>
+
+    </main>
+
+    <footer class="footer">
+
+      <nav class="navbar container">
+
+        <!-- enlaces -->
+        <ul class="navbar__items">
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/shop/shop.html">SHOP</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/register.html">REGISTRARSE</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/login.html">LOGIN</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../../pages/admin/contacto.html">CONTACTO</a>
+          </li>
+        </ul>
+
+        <!-- logo -->
+        <picture>
+          <img src="../../img/branding/isotype.svg" alt="Logotipo">
+        </picture>          
+
+      </nav>
+
+      <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+
+    </footer>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </body>
+
+</html>

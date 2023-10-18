@@ -1,0 +1,31 @@
+
+/* 
+  FORMS 
+*/
+
+.form__label {
+
+  font-weight: 400;
+}
+
+.form__button {
+  width: 175px;
+  font-weight: 600;
+  font-size: var(--font-xsmall);
+}
+
+.form__control {
+  font-size: var(--font-medium);
+}
+
+/* Campos */
+.form__control[name="SKU"],
+.form__control[name="precio"] {
+  width: 13em;
+}
+
+.form__control[name="stock"],
+.form__control[name="descuento"] {
+  width: 5.5em;
+  text-align: center;
+}
