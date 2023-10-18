@@ -9,15 +9,23 @@
    https://www.youtube.com/watch?v=IqN7fiKzEQ4&list=PLfiFSbj15P0sXvulEx-WIdo7hlr_LjR-h&index=2
 */
 
+/* fuentes */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* de Sistema */
+/* Glide */
 
-@import url('./system/variables.css');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
 
-@import url('./system/normalize.css');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
 
-@import url('./system/animations.css');
+/* Sistema */
+
+@import url('./css/variables.css');
+
+@import url('./css/normalize.css');
+
+@import url('./css/animations.css');
 
 /* Componentes */
 @import url('./component/page.css');
@@ -27,7 +35,7 @@
 @import url('./component/form.css');
 
 /* Operativos */
-@import url('./system/helpers.css');
+@import url('./css/helpers.css');
 
 
 
