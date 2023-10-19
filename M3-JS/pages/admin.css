@@ -28,7 +28,7 @@ main {
 }
 
 /* botones */
-.form__button {
+.button {
   min-width: 103px;
   padding: var(--spacing-12);
   font-weight: 400;

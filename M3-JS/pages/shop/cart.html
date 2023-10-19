@@ -10,13 +10,16 @@
     <!-- estilos globales -->
     <link rel="stylesheet" href="../../index.css">    
 
-    <!-- Componentes -->
+    <!-- Componentes -->    
     <link rel="stylesheet" href="../../component/table.css">
+    <!-- ...por controles de forms -->
+    <link rel="stylesheet" href="../../component/number.css">
+    <!-- ...por estructuras de datos -->
     <link rel="stylesheet" href="../../component/product.css">
 
     <!-- estilos por página -->
-    <link rel="stylesheet" href="./css/pages/shop.css">
-    <link rel="stylesheet" href="./css/pages/shop/cart.css">
+    <link rel="stylesheet" href="../shop.css">
+    <link rel="stylesheet" href="./cart.css">
 
   </head>
 
@@ -26,13 +29,11 @@
 
       <nav class="navbar">
 
-        <picture class="navbar__logo">
-
-          <a href="#">
-
-            <img src="../../img/branding/logo_light_horizontal.svg" alt="Logotipo con Nombre">
-          </a>
-        </picture>
+        <a href="../../Index.html">
+          <picture class="navbar__logo">          
+            <img src="../../img/branding/logo_light_horizontal.svg" alt="Logotipo con Nombre">        
+          </picture>
+        </a>
 
         <ul class="navbar__menu">
 
@@ -106,7 +107,8 @@
                 <section class="product">
                   
                   <picture class="product__cover">
-                    <img src="../../img/star-wars/baby-yoda-1.webp" alt="Figura Coleccionable Funko de Grogu de la Serie The Mandalorian">
+                    <img class="card__img--front" src="../../img/star-wars/baby-yoda-1.webp" alt="Figura Coleccionable Funko de Grogu de la Serie The Mandalorian">
+                    <img class="card__img--back" src="../../img/star-wars/baby-yoda-box.webp" alt="Figura Coleccionable Funko de Grogu de la Serie The Mandalorian en Caja">                    
                   </picture>
 
                   <article class="product__content">
@@ -121,7 +123,7 @@
               <td class="table__data">
                 <form action="" class="product__modify form">
 
-                  <div class="form__number">
+                  <div class="number">
       
                     <input class="form__control" type="text" name="cantidad" id="item_1-cantidad" value="2">
     
@@ -152,7 +154,8 @@
                 <section class="product">
                   
                   <picture class="product__cover">
-                    <img src="../../img/pokemon/pidgeotto-1.webp" alt="Figura Coleccionable Funko de Pidgeotto de la Serie Pokemon">
+                    <img class="card__img--front" src="../../img/pokemon/pidgeotto-1.webp" alt="Figura Coleccionable Funko de Pidgeotto de la Serie Pokemon">
+                    <img class="card__img--back" src="../../img/pokemon/pidgeotto-box.webp" alt="Figura Coleccionable Funko de Pidgeotto de la Serie Pokemon">
                   </picture>
 
                   <article class="product__content">
@@ -167,7 +170,7 @@
               <td class="table__data">
                 <form action="" class="product__modify form">
 
-                  <div class="form__number">
+                  <div class="number">
       
                     <input class="form__control" type="text" name="cantidad" id="item_2-cantidad" value="1">
     
@@ -207,27 +210,27 @@
 
             <div class="form__row">
               <label class="form__label">Cantidad de Elementos</label>
-              <span class="value number summary__cantidad">3</span>
+              <span class="form_value summary__cantidad">3</span>
             </div>
 
             <div class="form__row">
               <label class="form__label">Subtotal</label>
-              <span class="value number summary__subtotal">$5.399,97</span>
+              <span class="form_value summary__subtotal">$5.399,97</span>
             </div>
             
             <div class="form__row">
               <label class="form__label">Envío</label>
-              <span class="value number summary__envio">$0,00</span>
+              <span class="form_value summary__envio">$0,00</span>
             </div>
             
             <div class="form__row">
               <label class="form__label">Total</label>
-              <span class="value number summary__total">$5.399,97</span>
+              <span class="form_value summary__total">$5.399,97</span>
             </div>       
             
           </fieldset>
 
-          <button type="submit" class="form__button line">Ir a Pagar</a>
+          <button type="submit" class="button line">Ir a Pagar</a>
 
         </form>
 
@@ -267,6 +270,10 @@
     </footer>
     
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <!-- controles de input numerico -->
+    <script src="../../component/number.js"></script>
+
   </body>
 
 </html>

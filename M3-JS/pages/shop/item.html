@@ -10,15 +10,17 @@
     <!-- estilos globales -->
     <link rel="stylesheet" href="../../index.css">    
 
-    <!-- Componentes -->
-    <link rel="stylesheet" href="../../component/form.css">
+    <!-- Componentes -->    
     <link rel="stylesheet" href="../../component/card.css">
     <link rel="stylesheet" href="../../component/slider.css">
+    <!-- ...por controles de forms -->
+    <link rel="stylesheet" href="../../component/number.css">
+    <!-- ...por estructuras de datos -->
+    <link rel="stylesheet" href="../../component/product.css">
 
     <!-- estilos por página -->
-    <link rel="stylesheet" href="./shop.css">
-    <link rel="stylesheet" href="./shop/item.css">
-
+    <link rel="stylesheet" href="../shop.css">
+    <link rel="stylesheet" href="./item.css">
   </head>
 
   <body>
@@ -27,13 +29,11 @@
 
       <nav class="navbar">
 
-        <picture class="navbar__logo">
-
-          <a href="#">
-
-            <img src="../../img/branding/logo_light_horizontal.svg" alt="Logotipo con Nombre">
-          </a>
-        </picture>
+        <a href="../../Index.html">
+          <picture class="navbar__logo">          
+            <img src="../../img/branding/logo_light_horizontal.svg" alt="Logotipo con Nombre">        
+          </picture>
+        </a>
 
         <ul class="navbar__menu">
 
@@ -84,7 +84,8 @@
       <section class="product container">
         
         <picture class="product__cover">
-          <img src="../../img/star-wars/baby-yoda-1.webp" alt="Figura Coleccionable Funko de Grogu de la Serie The Mandalorian">
+          <img class="card__img--front" src="../../img/star-wars/baby-yoda-1.webp" alt="Figura Coleccionable Funko de Grogu de la Serie The Mandalorian">
+          <img class="card__img--back" src="../../img/star-wars/baby-yoda-box.webp" alt="Figura Coleccionable Funko de Grogu de la Serie The Mandalorian en Caja">
         </picture>        
 
         <article class="product__content">
@@ -101,7 +102,7 @@
 
             <fieldset class="form__row">
 
-              <div class="form__number">
+              <div class="number">
 
                 <input class="form__control" type="text" name="cantidad" id="producto_cantidad" placeholder="0">
 
@@ -112,7 +113,7 @@
 
               </div>              
 
-              <button type="submit" class="form__button">Agregar al Carrito</button>
+              <button type="submit" class="button">Agregar al Carrito</button>
 
             </fieldset>
 
@@ -259,7 +260,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="https://unpkg.com/@glidejs/glide"></script>
     <!-- m3: inicializo slider de la librería Glide -->
-    <script src="./component/slider.js"></script>      
+    <script src="../../component/slider.js"></script>      
+    <!-- controles de input numerico -->
+    <script src="../../component/number.js"></script>
   </body>
 
 </html>

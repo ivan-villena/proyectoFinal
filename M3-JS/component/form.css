@@ -11,10 +11,8 @@
   border-radius: 10px;
 }
 
-/* ////////////////////////////////////////////// */
-/* ////////////////////////////////////////////// */
 /* 
-  En Vertical 
+  contenido Vertical 
 */
 .form__col {
   display: flex;
@@ -26,7 +24,7 @@
 }
 
 /* 
-  En horizontal
+  contenido horizontal
 */
 .form__row {
   display: flex;
@@ -40,7 +38,7 @@
 /* ////////////////////////////////////////////// */
 /* ////////////////////////////////////////////// */
 /*  
-  Para Campos : label: input
+  Campos : label: input
 */
 .form__field {
   display: flex;
@@ -75,36 +73,12 @@
 
 /* ////////////////////////////////////////////// */
 /* ////////////////////////////////////////////// */
-/* 
-  botones de accion
-*/
-.form__button {
-  padding: var(--spacing-12);
-  background-color: var(--primary-solid);
-  color: var(--light-solid);
+
+/* valores: span con valor o algo destacado como un dato */
+.form_value {
+  color: var(--control-value);
 }
 
-/* contenedor horizontal */
-.form__row.form__buttons .form__button {
-  margin-left: var(--spacing-8);
-}
-
-/* todo el ancho */
-.form__button.line {
-  width: 100%;
-}
-
-/* boton de agregar: "+" */
-.form__button.add {
-  padding: 0;
-  width: var(--font-medium);
-  height: var(--font-medium);
-  font-weight: 900;
-  border-radius: 3px;
-}
-
-/* ////////////////////////////////////////////// */
-/* ////////////////////////////////////////////// */
 /* 
   controles 
 */
@@ -157,29 +131,6 @@ textarea.form__control {
   width: 6em;
   text-align: center;
 }
-
-/* 
-  Controlador numerico 
-*/
-.form__number {
-  display: flex;
-}
-.form__number .form__control {
-  max-width: 6em;
-}
-.form__number .number__buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.form__number .number__buttons button {  
-  width: 1.2em;
-  height: 1.2em;
-  margin-left: .5em;
-  background-color: var(--dark-bg-solid);
-  color: var(--light-solid);  
-}
-
 
 /* archivos */
 .form__control[type="file"] {

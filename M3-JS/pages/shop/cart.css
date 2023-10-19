@@ -24,7 +24,7 @@
   margin-bottom: 3em;
 }
 
-.products .table .form__number .number__buttons button {
+.products .table .number .number__buttons button {
   background-color: var(--primary-solid);  
 }
 
@@ -62,7 +62,7 @@
   justify-content: space-between;
 }
 
-.summary .form__button {
+.summary .button {
   
   text-transform: uppercase;
   font-size: var(--font-xlarge);

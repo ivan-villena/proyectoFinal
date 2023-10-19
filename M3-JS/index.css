@@ -28,11 +28,17 @@
 @import url('./css/animations.css');
 
 /* Componentes */
-@import url('./component/page.css');
+@import url('./component/header.css');
+
+@import url('./component/footer.css');
+
+@import url('./component/title.css');
 
 @import url('./component/navbar.css');
 
 @import url('./component/form.css');
+
+@import url('./component/button.css');
 
 /* Operativos */
 @import url('./css/helpers.css');

@@ -2,7 +2,8 @@
 /*  
   Seccion Principal
 */
-main.container {
+.shop {
+  display: flex;
   margin-top: 6em;
 }
 

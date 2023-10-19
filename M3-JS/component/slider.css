@@ -33,16 +33,14 @@ dlt- por motivos de conflictos con el glamp
 /* 
   agr- estilos para botones del slider 
 */
-iconify-icon {
+.slider iconify-icon {
   color: var(--dark-bg-solid);
   font-size: var(--font-small);
   font-weight: 700;
 }
-
 .glide__arrow--left {
   left: 0;
 }
-
 .glide__arrow--right {
   right: 0;
 }

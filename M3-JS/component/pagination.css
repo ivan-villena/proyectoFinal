@@ -14,6 +14,14 @@
 }
 /* ul > li */
 .pagination__item {
+  /*  
+    flex-grow: 
+      https://developer.mozilla.org/es/docs/Web/CSS/flex-grow
+    flex-shrink: 
+      https://developer.mozilla.org/es/docs/Web/CSS/flex-shrink
+    flex-basis: 
+      https://developer.mozilla.org/es/docs/Web/CSS/flex-basis
+  */
   flex: 1 1 clamp(250px, 30%, 30%);
 }
 

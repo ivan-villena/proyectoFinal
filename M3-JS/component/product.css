@@ -38,7 +38,7 @@
 .product__add {
   font-size: var(--font-medium);
 }
-.product__add .form__button {
+.product__add .button {
   margin-left: 1em;
 }
 

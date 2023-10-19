@@ -8,7 +8,7 @@
   font-weight: 400;
 }
 
-.form__button {
+.button {
   width: 175px;
   font-weight: 600;
   font-size: var(--font-xsmall);
