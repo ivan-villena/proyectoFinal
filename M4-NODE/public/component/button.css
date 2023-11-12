@@ -1,0 +1,29 @@
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* 
+  botones de accion
+*/
+.button {
+  padding: var(--spacing-12);
+  background-color: var(--primary-solid);
+  color: var(--light-solid);
+}
+
+/* todo el ancho */
+.button.line {
+  width: 100%;
+}
+
+/* contenedor horizontal */
+.form__buttons .button {
+  margin-left: var(--spacing-8);
+}
+
+/* icono de boton para agregar: "+" */
+.button.add {
+  padding: 0;
+  width: var(--font-medium);
+  height: var(--font-medium);
+  font-weight: 900;
+  border-radius: 3px;
+}
