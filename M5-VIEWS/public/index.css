@@ -1,0 +1,47 @@
+/*  
+  Normalizacion de Estilos
+    - https://www.youtube.com/watch?v=enYPmkjOWUc&list=PLfiFSbj15P0sXvulEx-WIdo7hlr_LjR-h&index=1&t=121s
+
+  Migracion desde figma   
+   - https://www.figma.com/file/IjTSeE2BpRd5Gk9VakNIhC/Challenge-Integrador---Funkoshop?type=design&node-id=19905-435&mode=design&t=5lMbrV3xZkfej8uH-0
+
+   Definicion de Variables
+   https://www.youtube.com/watch?v=IqN7fiKzEQ4&list=PLfiFSbj15P0sXvulEx-WIdo7hlr_LjR-h&index=2
+*/
+
+/* fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Glide */
+
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
+
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
+
+/* Sistema */
+
+@import url('./css/variables.css');
+
+@import url('./css/normalize.css');
+
+@import url('./css/animations.css');
+
+/* Componentes */
+@import url('./component/header.css');
+
+@import url('./component/footer.css');
+
+@import url('./component/title.css');
+
+@import url('./component/navbar.css');
+
+@import url('./component/form.css');
+
+@import url('./component/button.css');
+
+/* Operativos */
+@import url('./css/helpers.css');
+
+
+
