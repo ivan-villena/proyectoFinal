@@ -1,7 +1,7 @@
 /* HERO */
 
 .hero {
-    background-image: url(../../Api/img/funkos-banner.webp);
+    background-image: url(../..//img/funkos-banner.webp);
     padding: var(--spacing-128);
     background-position: top;
     background-size: cover;

@@ -8,7 +8,7 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "PKM001001",
-    "img_front": "/img/pokemon/pidgeotto-1.webp",
-    "img_back": "/img/pokemon/pidgeotto-box.webp"
+    "img_front": "/public/img/pokemon/pidgeotto-1.webp",
+    "img_back": "/public/img/pokemon/pidgeotto-box.webp"
   }
 ]  
