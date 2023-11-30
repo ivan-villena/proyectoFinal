@@ -8,7 +8,7 @@
   /* ajusto el tamaño del banner */
   padding: var(--spacing-128);
 
-  background-image: url(..//img/funkos-banner.webp);
+  background-image: url(../img/funkos-banner.webp);
   /* ajusto el tamaño de la imagen para que no se repita */
   background-size: cover;  
   /* dejamos fijo el tamaño del fondo: efecto al scrollear */

@@ -1,0 +1,30 @@
+[
+  {
+   "id": 1,
+   "code": "star-wars",
+   "name": "Star Wars",
+   "description": "Disfruta de una saga que sigue agregando personajes a su Colección.",
+   "default_product": 4
+  },
+  {
+   "id": 2,
+   "code": "pokemon",
+   "name": "Pokemon",
+   "description": "Atrapa todos los que puedas y disfruta de una colección llena de amigos.",
+   "default_product": 2
+  },
+  {
+   "id": 3,
+   "code": "harry-potter",
+   "name": "Harry Potter",
+   "description": "Revive los recuerdos de una saga llena de magia y encanto.",
+   "default_product": 3
+  },
+  {
+   "id": 4,
+   "code": "naruto",
+   "name": "Naruto",
+   "description": "Ninjas!",
+   "default_product": 5
+  }  
+]

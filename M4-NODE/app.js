@@ -35,6 +35,6 @@ app.use( '/user', userRoutes );
 app.listen( PORT, () => console.log(`Servidor corriendo en el puerto http://localhost:${PORT}`) )
 
 /*  
-  npm ren dev
+  npm run dev
 */
 

@@ -1,15 +1,78 @@
-const shopControllers = {
 
-  shop: res.send(`Esta ruta devuelve al vista de shop`),
+const productModel = require("../models/productModel.js");
 
-  getItem: res.send(`Esta ruta devuelve la vista de un item`),
+const cartModel = require("../models/cartModel.js");
 
-  setItem: res.send(`Esta ruta procesa el agregar un item`),
+module.exports = {
 
-  getCart: res.send(`Esta ruta devuelve la vista del carrito`), 
+  // listado de Productos
+  products: ( req, res ) => {
+    
+    res.render( "shop/products", {
+      
+      title: "Shop | Funkoshop",
 
-  setCart: res.send(`Esta ruta procesa los Cambios del Carrito`)
+      styles: [
+        // componentes:
+        "component/pagination",
+        // por página:
+        "pages/shop",
+        "pages/shop/products"
+      ],
 
+      products: productModel.listar( req.query )
+    });
+  },
+
+  // detalle del Producto
+  product: ( req, res ) => {
+
+    const Product = productModel.ver({ id: req.params.id });
+    
+    res.render( "shop/product", {
+      
+      title: "Items del Carrito | Funkoshop",
+
+      styles: [
+        // componentes:
+        "component/slider",
+        "component/number",
+        "component/product",
+        // por página:
+        "pages/shop",
+        "pages/shop/product"          
+      ],
+
+      // slider
+      scripts_glide: [ "slider" ],
+
+      products_title: "Productos Relacionados...",
+      products_list: productModel.listar([ ['licence','==',Product.licence] ]),
+
+      // formulario
+      Prooduct: Product
+    });
+  },  
+
+  // carrito del usuario con Productos seleccionados
+  cart: ( req, res ) => {
+    
+    res.render( "shop/cart", {
+      
+      title: "Carrito | Funkoshop",
+
+      styles: [
+        // componentes:
+        "component/table",
+        "component/number",
+        "component/product",
+        // por página:
+        "pages/shop",
+        "pages/shop/cart"
+      ],
+
+      // por id del Usuario
+      Cart: cartModel.ver({ user: 1 })
+    });
+  }
 }
-
-module.exports = shopControllers;

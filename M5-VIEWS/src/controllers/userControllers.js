@@ -1,15 +1,36 @@
-const userControllers = {
 
-  getLoggin: res.send(`Esta ruta devuelve el loggin`),
+module.exports = {
 
-  setLoggin: res.send(`Esta ruta procesa el loggin`),
+  login: ( req, res ) => {
+    
+    res.render( "user/login", { 
 
-  getRegister: res.send(`Esta ruta devuelve el formulario de Registro`),
+      title: "Login | Funkoshop",
 
-  setRegister: res.send(`Esta ruta procesa el formulario de Registro`),
+      styles: [
+        // componentes:        
+        // por página:
+        "pages/user",
+        "pages/user/login"            
+      ]
 
-  getLogout: res.send(`Esta ruta procesa el logout`)
+     });
+  },
 
+  register: ( req, res ) => {
+    
+    res.render( "user/register", { 
+
+      title: "Registrarse | Funkoshop",
+
+      styles: [
+        // componentes:        
+        // por página:
+        "pages/user",
+        "pages/user/register"            
+      ]
+
+     });
+  }
 }
 
-module.exports = userControllers;

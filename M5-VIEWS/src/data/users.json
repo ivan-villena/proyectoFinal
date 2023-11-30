@@ -1,0 +1,30 @@
+[
+  {
+    "id":1,
+    "name": "Iván",
+    "lastName": "Villena",
+    "email": "ivan.pieszko@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id":2,
+    "name": "",
+    "lastName": "",
+    "email": "",
+    "password": "1234"
+  },
+  {
+    "id":3,
+    "name": "",
+    "lastName": "",
+    "email": "",
+    "password": "1234"
+  },
+  {
+    "id":4,
+    "name": "",
+    "lastName": "",
+    "email": "",
+    "password": "1234"
+  }  
+]

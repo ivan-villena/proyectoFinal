@@ -1,0 +1,51 @@
+
+<section class="slider container glide">
+
+  <h2 class="slider__title"><%=products_title ? products_title : "Otros Productos..."%></h2>
+
+  <div class="glide__track" data-glide-el="track">    
+
+    <ul class="slider__items glide__slides">
+
+      <% if( product_list ) for( const product of product_list ){ %>
+
+        <li class="slider__item glide__slide">
+        
+          <article class="card">
+  
+            <a class="card__link" href="">
+  
+              <picture class="card__cover">
+                <span class="card__tag">Nuevo</span>
+                <img class="card__img--front" src="./img<%=product.img_front%>" alt="<%product.description%>">
+                <img class="card__img--back" src="./img<%=product.img_back%>" alt="<%product.description%>">
+              </picture>
+  
+              <div class="card__content">
+                <p class="card__licence"><%=product.licence%></p>
+                <h4 class="card__name"<%=product.name%></h3>
+                <p class="card__price">$<%=product.price%>-</p>
+                <p class="card__promo"><%=product.dues%> Cuotas sin Interés</p>
+              </div>
+  
+            </a>
+          </article>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+
+  <!-- agrego controles para botones -->
+  <div class="glide__arrows" data-glide-el="controls">
+
+    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+      <iconify-icon icon="ion:chevron-back"></iconify-icon>
+    </button>
+
+    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+      <iconify-icon icon="ion:chevron-forward"></iconify-icon>
+    </button>
+    
+  </div>
+  
+</section>

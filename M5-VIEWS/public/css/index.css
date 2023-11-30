@@ -1,0 +1,49 @@
+
+/* -- Externos -- */
+
+/* fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Glide */
+
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
+
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
+
+/* -- Internos -- */
+
+/* Globales */
+
+@import url('./css/config/variables.css');
+
+@import url('./css/config/normalize.css');
+
+@import url('./css/config/animations.css');
+
+/* Estructura de Página */
+
+@import url('./css/component/header.css');
+
+@import url('./css/component/navbar.css');
+
+@import url('./css/component/footer.css');
+
+/* Elementos */
+
+@import url('./css/component/form.css');
+
+@import url('./css/component/title.css');
+
+@import url('./css/component/button.css');
+
+/* Complementos */
+
+@import url('./css/component/card.css');
+
+/* Ajustes */
+
+@import url('./css/config/settings.css');
+
+
+
