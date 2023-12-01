@@ -49,6 +49,7 @@
 .form__field .form__label {
   font-weight: 400;
   font-size: var(--font-large);
+  text-align: right;
 }
 
 .form__field .form__control {   

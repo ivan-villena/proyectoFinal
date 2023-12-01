@@ -27,14 +27,6 @@ main {
   font-size: var(--font-medium);
 }
 
-/* botones */
-.button {
-  min-width: 103px;
-  padding: var(--spacing-12);
-  font-weight: 400;
-  font-size: var(--font-xxsmall);
-}
-
 /* campos */
 .form__field {
   justify-content: space-between;

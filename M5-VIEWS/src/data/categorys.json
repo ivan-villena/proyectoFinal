@@ -1,17 +1,14 @@
 [
  {
   "id": 1,
-  "code": "figura-coleccionable",
   "name": "Figuras coleccionables"
  },
  {
   "id": 2,
-  "code": "llavero",
-  "name": "Llaveros"
+  "name": "Remeras"
  },
  {
   "id": 3,
-  "code": "remera",
-  "name": "Remeras"
- }  
+  "name": "Llaveros"
+ }
 ]

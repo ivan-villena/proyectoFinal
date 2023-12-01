@@ -1,3 +1,18 @@
+'use strict';
+
+/* agrego eventos a los botones */
+
+[ "add", "remove" ].forEach( tipo => 
+  
+  Array.from( document.querySelectorAll(`.number__button--${tipo}`) ).forEach( btn => 
+    
+    btn.addEventListener('click',number) 
+  ) 
+
+);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* controlador numérico */
 
@@ -26,15 +41,6 @@ function number( event ){
   }
 }
 
-/* agrego eventos a los botones */
 
-[ "add", "remove" ].forEach( tipo => 
-  
-  Array.from( document.querySelectorAll(`.number__button--${tipo}`) ).forEach( btn => 
-    
-    btn.addEventListener('click',number) 
-  ) 
-
-);
 
 

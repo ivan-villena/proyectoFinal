@@ -7,30 +7,58 @@ const lincenceModel = require("../models/licenceModel.js");
 
 const cuotaModel = require("../models/cuotasModel.js");
 
-let cuotas_defaul = 6;
+const cuotas_defaul = 6;
 
 module.exports = {
 
   // Listado de Productos con Acciones
   admin: ( req, res ) => {
 
-    res.render( "product/admin", {
+    let products = [];    
+
+    if( req.query.buscar ){
+
+      const buscar = req.query.buscar.toUpperCase();
       
-      title: "Administrador de Productos | Funkoshop",
+      for( const Product of productModel.listar() ){
 
-      styles: [
-        // componentes:
-        "component/table",
-        // por página:
-        "pages/product",
-        "pages/product/admin"        
-      ],
+        if( 
+          Product.id == buscar || 
+          Product.sku.toUpperCase() == buscar || 
+          Product.name.toUpperCase() == buscar || 
+          Product.Licence.name.toUpperCase() == buscar || 
+          Product.Category.name.toUpperCase() == buscar  
+        ){
+          products.push( Product );
+        }
+      }
+    }
+    else{
 
-      // navbar
-      is_admin: true,
+      products = productModel.listar( req.query.buscar == undefined ? req.query : {} );
+    }
 
-      // datos
-      products: productModel.listar( req.query )
+    res.render( "product/admin", {
+
+      head: {
+
+        title: "Administrador de Productos | Funkoshop",
+
+        styles: [
+          // elementos:
+          "document/table",
+          // página:
+          "pages/product",
+          "pages/product/admin"
+        ],
+
+        scripts:[
+          "pages/product/admin"
+        ]
+      },
+
+      products
+         
     });
   },
 
@@ -39,25 +67,27 @@ module.exports = {
 
     res.render( "product/create", {
       
-      title: "Crear un Producto | Funkoshop",
+      head: {
 
-      styles: [
-        // componentes:
-        
-        // por página:
-        "pages/product",
-        "pages/product/create"        
-      ],
+        title: "Crear un Producto | Funkoshop",
 
-      // navbar
-      is_admin: true,
+        styles: [
+          "pages/product",
+          "pages/product/create"        
+        ],
+
+        scripts:[
+          "pages/product/validate"
+        ]
+      },      
 
       // selectores
       categorys: categoryModel.listar(),
       licences: lincenceModel.listar(),
       cuotas: cuotaModel.listar(),
       
-      cuotas_defaul: cuotas_defaul
+      cuotas_defaul
+
     });
   },
 
@@ -65,29 +95,31 @@ module.exports = {
   edit: ( req, res ) => {
 
     res.render( "product/edit", {
+
+      head: {
+
+        title: "Editar un Producto | Funkoshop",
+
+        styles: [
+          "pages/product",
+          "pages/product/edit"        
+        ],
+
+        scripts:[
+          "pages/product/validate"
+        ]
+      },
       
-      title: "Editar un Producto | Funkoshop",
-
-      styles: [
-        // componentes:
-        
-        // por página:
-        "pages/product",
-        "pages/product/edit"        
-      ],
-
-      // navbar
-      is_admin: true,
-
       // selectores
       categorys: categoryModel.listar(),
       licences: lincenceModel.listar(),
       cuotas: cuotaModel.listar(),
 
-      cuotas_defaul: cuotas_defaul,
+      cuotas_defaul,
 
-      // datos
+      // productos
       Product: productModel.ver({ id: req.params.id })
+
     });
   },
 

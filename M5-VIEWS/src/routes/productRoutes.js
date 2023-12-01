@@ -5,12 +5,10 @@ const productController = require("../controllers/productControllers.js");
 
 const router = express.Router();
 
-router.get('/', (req,res) => productController.admin );
+router.get('/', productController.admin );
 
-router.post('/create', (req,res) => productController.create );
+router.get('/create', productController.create );
 
-router.put('/edit/:id', (req,res) => productController.edit );
-
-router.delete('/delete/:id', (req,res) => productController.delete );
+router.get('/:id', productController.edit );
 
 module.exports = router;

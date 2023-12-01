@@ -1,7 +1,7 @@
 
 const productModel = require("../models/productModel.js");
 
-const licenceModel = require("../models/licenceModel.js")
+const collectionModel = require("../models/collectionModel.js")
 
 module.exports = {
 
@@ -9,42 +9,41 @@ module.exports = {
 
     res.render( "home", { 
 
-      title: "Home | Funkoshop",
-      
-      styles: [
-        "component/hero",
-        "component/collection",
-        "component/slider"
-      ],
+      head: {
 
-      scripts: [],
-      scripts_glide: [ "slider" ],
+        title: "Home | Funkoshop",
+      
+        styles: [
+          "components/hero",
+          "components/collection",
+          "components/slider"
+        ],
+
+        scripts: [ 
+          "components/slider" 
+        ]
+      },
 
       // colecciones
-      licences: licenceModel.listar([ ['id','<>',4] ]),
-      
-      // productos
-      products: productModel.listar(),
+      collections: collectionModel.listar([ ['id','<>',4] ]),
 
       // slider
       products_title: "Últimos Lanzamientos...",
-      products_list: productModel.listar_ultimos()
+      products_list: productModel.listar([ ['is_new','==',true] ])
     })
   },
 
-  contacto: ( req, res ) => {
+  contact: ( req, res ) => {
 
-    res.send(`Vista de Contacto`);
-  },
+    // res.send(`Vista de Contacto`);
 
-  nosotros: ( req, res ) => {
+    res.render( "contact", {
 
-    res.send(`Vista de Sobre nosotros`);
-  },
-
-  faqs: ( req, res ) => {
-
-    res.send(`Vista del preguntas frecuentes`);
+      head:{
+        title: "Contacto | Funkoshop"
+      }
+      
+    });
   }
 
 }

@@ -5,10 +5,10 @@ const shopController = require("../controllers/shopControllers.js");
 
 const router = express.Router();
 
-router.get('/', (req,res) => shopController.products );
+router.get('/', shopController.products );
 
-router.get('/cart', (req,res) => shopController.cart );
+router.get('/cart', shopController.cart );
 
-router.post('/product/:id', (req,res) => shopController.product );
+router.get('/product/:id', shopController.product );
 
 module.exports = router;

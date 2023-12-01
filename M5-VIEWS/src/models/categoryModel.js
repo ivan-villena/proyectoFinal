@@ -3,17 +3,18 @@ const fs = require("node:fs");
 
 const Valor = require("../utils/Valor.js")
 
-const categorys = JSON.parse( fs.readFileSync("../data/categorys.json", "utf-8") );
+const categorys = JSON.parse( fs.readFileSync("./src/data/categorys.json", "utf-8") );
 
-
-/* proceso categorias */
 module.exports = {
 
-  ver : ({ atributo: valor }) => {
+  ver : ( filtro = {} ) => {
 
     for( const Category of categorys ){
   
-      if( Category[atributo] == valor ) return Category;
+      for( const atributo in filtro ){
+
+        if( Category[atributo] == filtro[atributo] ) return Category;
+      }      
     }
   },
   

@@ -1,5 +1,5 @@
 
-<%-include("./partials/head")%>
+<%-include("../partials/head")%>
 
 <!-- productos -->
 <main class="main-container">
@@ -9,7 +9,7 @@
     <!-- buscador -->
     <aside class="shop_buscador">
 
-      <form action="" class="form">
+      <form class="form">
 
         <div class="form__col">
           <label class="form__label" for="buscar_producto">BUSCAR</label>
@@ -21,10 +21,11 @@
           <label class="form__label" for="buscardor-ordenar">ORDENAR</label>
 
           <select class="form__control" name="ordenar" id="buscardor-ordenar">
-            <option value="mayor">Alfabético A-Z</option>
-            <option value="mayor">Alfabético Z-A</option>
-            <option value="mayor">Precio de Mayor a Menor</option>
-            <option value="menor">Precio de Menor a Mayor</option>
+            <option value="" default="2" selected="1" disabled="1"></option>
+            <option value="A-Z">Alfabético A-Z</option>
+            <option value="Z-A">Alfabético Z-A</option>
+            <option value="9-1">Precio de Mayor a Menor</option>
+            <option value="1-9">Precio de Menor a Mayor</option>
           </select>
 
         </div>
@@ -57,15 +58,24 @@
               <label class="form__label" for="buscador-filtro_oferta">OFERTAS</label>
             </li>
             <li class="check__item">
-              <input class="form__control" type="checkbox" name="edicion" id="buscador-filtro_edicion">
-              <label class="form__label" for="buscador-filtro_edicion">EDICIÓN ESPECIAL</label>
+              <input class="form__control" type="checkbox" name="especial" id="buscador-filtro_especial">
+              <label class="form__label" for="buscador-filtro_especial">EDICIÓN ESPECIAL</label>
             </li>
             <li class="check__item">
               <input class="form__control" type="checkbox" name="favorito" id="buscador-filtro_favorito">
               <label class="form__label" for="buscador-filtro_favorito">FAVORITOS</label>
             </li>
           </ul>
+
         </div>
+
+        <fieldset class="form__row form__buttons margin-1">
+
+          <button class="button" type="submit">Enviar</button>
+  
+          <button class="button" type="reset">Limpiar</button>
+  
+        </fieldset>
 
       </form>
 
@@ -77,24 +87,27 @@
       <!-- Grilla de 3 x 3 -->
       <ul class="pagination__list">
 
-        <% for( const Product in products ){ %>
+        <% for( const Product of products ){ %>
 
         <li class="pagination__item">
           
           <article class="card">
 
-            <a class="card__link" href="">
+            <a class="card__link" href="/shop/product/<%=Product.id%>">
 
               <picture class="card__cover">
-                <span class="card__tag">Nuevo</span>
-                <img class="card__img--front" src="./img<%=Product.img_front%>" alt="imagen del producto de lado frontal">
-                <img class="card__img--back" src="./img<%=Product.img_back%>" alt="imagen del producto de lado posterior">
+                <% if( Product.is_new ) { %>
+                  <span class="card__tag">Nuevo</span>
+                <% } %>
+                
+                <img class="card__img--front" src="<%=Product.img_front%>" alt="imagen del producto de lado frontal">
+                <img class="card__img--back" src="<%=Product.img_back%>" alt="imagen del producto de lado posterior">
               </picture>
 
               <div class="card__content">
-                <p class="card__licence"><%=Product.licence%></p>
+                <p class="card__licence"><%=Product.Licence.name%></p>
                 <h4 class="card__name"><%=Product.name%></h3>
-                <p class="card__price">$<%=Product.price.toLocalString('es', { style:"currency" })%></p>
+                <p class="card__price">$<%=Product.price.toFixed(2)%></p>
                 <p class="card__promo"><%=Product.Cuotas.name%></p>
               </div>
 
@@ -124,4 +137,4 @@
 
 </main>
 
-<%-include("./partials/foot")%>
+<%-include("../partials/foot")%>

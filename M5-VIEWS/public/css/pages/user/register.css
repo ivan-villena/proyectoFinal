@@ -5,6 +5,7 @@
 }
 
 .register > .form {
-  width: 550px;
+  width: 100%;
+  max-width: 650px;
   padding: var(--spacing-16);
 }

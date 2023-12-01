@@ -5,14 +5,19 @@ module.exports = {
     
     res.render( "user/login", { 
 
-      title: "Login | Funkoshop",
+      head: {
 
-      styles: [
-        // componentes:        
-        // por página:
-        "pages/user",
-        "pages/user/login"            
-      ]
+        title: "Login | Funkoshop",
+
+        styles: [
+          "pages/user",
+          "pages/user/login"            
+        ],
+
+        scripts:[
+          "pages/user/login"
+        ]
+      }
 
      });
   },
@@ -21,16 +26,20 @@ module.exports = {
     
     res.render( "user/register", { 
 
-      title: "Registrarse | Funkoshop",
+      head: {
 
-      styles: [
-        // componentes:        
-        // por página:
-        "pages/user",
-        "pages/user/register"            
-      ]
+        title: "Registrarse | Funkoshop",
 
-     });
+        styles: [
+          "pages/user",
+          "pages/user/register"            
+        ],
+
+        scripts:[
+          "pages/user/validate"
+        ]
+      }
+    });
   }
 }
 

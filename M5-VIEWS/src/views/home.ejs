@@ -2,28 +2,28 @@
 <%-include("./partials/head")%>
 
   <!-- banner -->
-  <%-include("./component/banner")%>
+  <%-include("./components/banner")%>
 
   <!-- Contenido principal -->
   <main class="main-container">
 
-    <% for( const Licence of licences ) { %>
+    <% for( const Collection of collections ) { %>
 
     <!-- Colecciones -->
     <section class="collection container">
 
       <article class="collection__content">
 
-        <h3 class="collection__title"><%Licence.name%></h3>
+        <h3 class="collection__title"><%=Collection.Licence.name%></h3>
 
-        <p class="collection__text"><%Licence.description%></p>
+        <p class="collection__text"><%=Collection.Licence.description%></p>
 
-        <a class="collection__link" href="/shop?licence=<%Licence.code%>">VER COLECCIÓN</a>
+        <a class="collection__link" href="/shop?licence=<%=Collection.licence%>">VER COLECCIÓN</a>
       
       </article>  
 
       <picture class="collection__cover">
-        <img src="<%Licence.Product.img_front%>" alt="<%Licence.Product.description%>">
+        <img src="<%=Collection.Product.img_front%>" alt="<%=Collection.Product.description%>">
       </picture>
       
     </section>
@@ -31,7 +31,7 @@
     <% } %>
 
     <!-- Ultimos Lanzamientos -->
-    <%-include("./component/products")%>
+    <%-include("./components/products")%>
     
   </main>
 

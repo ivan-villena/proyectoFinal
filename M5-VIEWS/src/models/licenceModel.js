@@ -3,28 +3,18 @@ const fs = require("node:fs");
 
 const Valor = require("../utils/Valor.js")
 
-const licences = JSON.parse( fs.readFileSync("../data/licences.json", "utf-8") );
-
-const productModel = require("./productModel.js");
-
-/* cargo objetos relacioados */
-
-const cargar_relaciones = ( Licence ) => {
-
-  Licence.Product = productModel.ver({ id: Licence.product });
-
-  return Licence;
-};
-
-/* proceso licencias */
+const licences = JSON.parse( fs.readFileSync("./src/data/licences.json", "utf-8") );
 
 module.exports = {  
 
-  ver : ({ atributo: valor }) => {
+  ver : ( filtro = {} ) => {
 
     for( const Licence of licences ){
-  
-      if( Licence[atributo] == valor ) return cargar_relaciones(Licence);
+
+      for( const atributo in filtro ){
+
+        if( Licence[atributo] == filtro[atributo] ) return Licence;
+      }      
     }
   },
   
@@ -34,7 +24,7 @@ module.exports = {
   
     for( const licence in listado ){
   
-      listado[licence] = cargar_relaciones(listado[licence]);
+      listado[licence] = listado[licence];
     }
   
     return listado;

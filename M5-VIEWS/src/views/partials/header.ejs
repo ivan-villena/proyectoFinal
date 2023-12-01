@@ -1,3 +1,4 @@
+
 <!-- navbar -->
 <header class="header">
 
@@ -7,14 +8,14 @@
 
       <a href="/">
         
-        <img src="./img/branding/logo_light_horizontal.svg" alt="Logotipo con Nombre">
+        <img src="/img/branding/logo_light_horizontal.svg" alt="Logotipo con Nombre">
       </a>
 
     </picture>
 
     <ul class="navbar__menu">
 
-      <% if( is_admin ){ %>
+      <% if( locals.is_admin ){ %>
         
         <li class="navbar__item">
 
@@ -42,17 +43,17 @@
 
             <li class="submenu__item">
 
-              <a class="submenu__link" href="#">Funkos</a>
+              <a class="submenu__link" href="/shop?category=1">Funkos</a>
             </li>
 
             <li class="submenu__item">
 
-              <a class="submenu__link" href="#">Remeras</a>
+              <a class="submenu__link" href="/shop?category=2">Remeras</a>
             </li>
 
             <li class="submenu__item">
 
-              <a class="submenu__link" href="#">LLaveros</a>
+              <a class="submenu__link" href="/shop?category=3">LLaveros</a>
             </li>
           </ul>
 
@@ -72,7 +73,7 @@
 
           <a class="navbar__cart" href="/shop/cart">
             
-            <img src="./img/icons/cart-icon.svg" alt="ícono de carrito">
+            <img src="/img/icons/cart-icon.svg" alt="ícono de carrito">
           </a>
         </li>      
 

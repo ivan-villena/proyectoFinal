@@ -1,5 +1,5 @@
 
-<%-include("./partials/head")%>
+<%-include("../partials/head")%>
 
 <main class="main-container">
 
@@ -19,7 +19,7 @@
 
             <% for( const Category of categorys ){ %>
 
-            <option value="<%Category.id%>"><%Category.name%></option>
+            <option value="<%=Category.id%>"><%=Category.name%></option>
             <% } %>
 
           </select>
@@ -33,7 +33,7 @@
 
             <% for( const Licence of licences ){ %>
 
-              <option value="<%Licence.id%>"><%Licence.name%></option>
+              <option value="<%=Licence.id%>"><%=Licence.name%></option>
             <% } %>
           </select>
         </div>          
@@ -84,7 +84,12 @@
           <select class="form__control" name="cuotas" id="product-cuotas">
                       
             <% for( const Cuota of cuotas ){ %>
-              <option value="<%Cuota.id%>"<%=`${cuotas == cuotas_defaul ? " default" : ""}`%><%=Cuota.name%></option>
+              <option 
+                value="<%=Cuota.id%>"
+                <%=`${ Cuota.id == cuotas_defaul ? ` default="1" selected="1"` : ""}`%>
+              >
+                <%=Cuota.name%>
+              </option>
             <% } %>
 
           </select>
@@ -119,4 +124,4 @@
 
 </main>
 
-<%-include("./partials/foot")%>
+<%-include("../partials/foot")%>

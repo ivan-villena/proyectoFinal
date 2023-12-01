@@ -3,16 +3,19 @@ const fs = require("node:fs");
 
 const Valor = require("../utils/Valor.js")
 
-const cuotas = JSON.parse( fs.readFileSync("../data/cuotas.json", "utf-8") );
+const cuotas = JSON.parse( fs.readFileSync("./src/data/cuotas.json", "utf-8") );
 
-/* proceso cuotas */
 module.exports = {
 
-  ver : ({ atributo: valor }) => {
+  ver : ( filtro = {} ) => {
 
-    const filter = cuotas.filter( Cuota => Cuota[atributo] == valor );
+    for( const Cuota of cuotas ){
 
-    return  filter.length ? filter[0] : undefined;
+      for( const atributo in filtro ){
+
+        if( Cuota[atributo] == filtro[atributo] ) return Cuota;
+      }      
+    }
   },
   
   listar : ( filtros ) => {

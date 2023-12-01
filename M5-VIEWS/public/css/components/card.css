@@ -70,7 +70,7 @@
   font-size: var(--font-small);
 }
 .card__promo {
-  font-size: var(--font-xsmall);
+  font-size: var(--font-xxsmall);
   font-weight: 700;
   color: var(--secondary-solid);
 }

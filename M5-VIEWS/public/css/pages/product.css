@@ -8,12 +8,6 @@
   font-weight: 400;
 }
 
-.button {
-  width: 175px;
-  font-weight: 600;
-  font-size: var(--font-xsmall);
-}
-
 .form__control {
   font-size: var(--font-medium);
 }

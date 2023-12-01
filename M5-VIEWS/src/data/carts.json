@@ -2,6 +2,7 @@
   {
     "id": 1,
     "user": 1,
+    "envio": 0,
     "items": [
       {
         "id":1,

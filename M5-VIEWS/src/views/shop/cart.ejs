@@ -1,5 +1,5 @@
 
-<%-include("./partials/head")%>
+<%-include("../partials/head")%>
 
 <main class="main-container">
 
@@ -34,14 +34,14 @@
             <section class="product">
               
               <picture class="product__cover">
-                <img class="card__img--front" src="<%Cart_Item.product.img_front%>" alt="<%Cart_Item.product.description%>">
-                <img class="card__img--back" src="<%Cart_Item.product.img_back%>" alt="<%Cart_Item.product.description%> en Caja">                    
+                <img class="card__img--front" src="<%=Cart_Item.Product.img_front%>" alt="<%=Cart_Item.Product.description%>">
+                <img class="card__img--back" src="<%=Cart_Item.Product.img_back%>" alt="<%=Cart_Item.Product.description%> en Caja">                    
               </picture>
 
               <article class="product__content">
-                <h4 class="product__name"><%Cart_Item.product.name%></h4>
-                <p class="product__licence"><%Cart_Item.product.licence%></p>
-                <p class="product__price">precio: $<%Cart_Item.product.price.toLocaleString('es', { style: 'currency' })%></p>
+                <h4 class="product__name"><%=Cart_Item.Product.name%></h4>
+                <p class="product__licence"><%=Cart_Item.Product.Licence.name%></p>
+                <p class="product__price">precio: $<%=Cart_Item.Product.price.toFixed(2)%></p>
               </article>
 
             </section>
@@ -54,7 +54,7 @@
 
               <div class="number">
   
-                <input class="form__control" type="text" name="cantidad" id="item_1-cantidad" value="<%Cart_Item.cantidad%>">
+                <input class="form__control" type="text" name="cantidad" id="item_1-cantidad" value="<%=Cart_Item.cantidad%>">
 
                 <span class="number__buttons">
                   <button type="button" class="number__button--add">+</button>
@@ -68,12 +68,12 @@
 
           <!-- total en pesos -->
           <td class="table__data">
-            <p class="product__total"><%`${ Number( Cart_Item.product.price * Cart_Item.cantidad ).toLocaleString('es', { style: 'currency' }) }`%></p>
+            <p class="product__total"><%=`${ Number( Cart_Item.Product.price * Cart_Item.cantidad ).toFixed(2) }`%></p>
           </td>
 
           <!-- eliminar item -->
           <td class="table__data">
-            <img src="./img/icons/delete_trash.svg" alt="Eliminar Producto del Carrito">
+            <img src="/img/icons/delete_trash.svg" alt="Eliminar Producto del Carrito">
           </td>              
         </tr>
 
@@ -124,4 +124,4 @@
 
 </main>
 
-<%-include("./partials/foot")%>
+<%-include("../partials/foot")%>

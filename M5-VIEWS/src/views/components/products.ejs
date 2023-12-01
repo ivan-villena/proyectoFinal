@@ -1,36 +1,39 @@
 
 <section class="slider container glide">
 
-  <h2 class="slider__title"><%=products_title ? products_title : "Otros Productos..."%></h2>
+  <h2 class="slider__title"><%=products_title%></h2>
 
   <div class="glide__track" data-glide-el="track">    
 
     <ul class="slider__items glide__slides">
 
-      <% if( product_list ) for( const product of product_list ){ %>
+      <% for( const Product of products_list ){ %>
 
         <li class="slider__item glide__slide">
         
           <article class="card">
   
-            <a class="card__link" href="">
+            <a class="card__link" href="/shop/product/<%=Product.id%>">
   
               <picture class="card__cover">
-                <span class="card__tag">Nuevo</span>
-                <img class="card__img--front" src="./img<%=product.img_front%>" alt="<%product.description%>">
-                <img class="card__img--back" src="./img<%=product.img_back%>" alt="<%product.description%>">
+                <% if( Product.is_new ) { %>
+                  <span class="card__tag">Nuevo</span>
+                <% } %>
+                <img class="card__img--front" src="<%=Product.img_front%>" alt="<%Product.description%>">
+                <img class="card__img--back" src="<%=Product.img_back%>" alt="<%Product.description%>">
               </picture>
   
               <div class="card__content">
-                <p class="card__licence"><%=product.licence%></p>
-                <h4 class="card__name"<%=product.name%></h3>
-                <p class="card__price">$<%=product.price%>-</p>
-                <p class="card__promo"><%=product.dues%> Cuotas sin Interés</p>
+                <p class="card__licence"><%=Product.Licence.name%></p>
+                <h4 class="card__name"<%=Product.name%></h3>
+                <p class="card__price">$<%=Product.price.toFixed(2)%>-</p>
+                <p class="card__promo"><%=Product.Cuotas.name%></p>
               </div>
   
             </a>
           </article>
         </li>
+        
       <% } %>
     </ul>
   </div>

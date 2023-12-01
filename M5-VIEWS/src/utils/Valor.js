@@ -3,7 +3,7 @@ const Texto = require("./Texto.js");
 
 /* Proceso Valor */
 
-module.exports = {
+const Valor = {
 
   /* Comparación de Valores */
 
@@ -35,53 +35,52 @@ module.exports = {
   
   /* Proceso Filtros de Lista */
   
-  filtrar : ( listado, filtros, operador = "&&", comparador = "==" ) => {
+  filtrar : ( listado = [], filtros = [], operador = "&&", comparador = "==" ) => {
   
     let resultado = [];
   
-    if( filtros ){
+    if( Array.isArray(filtros) ){
   
-      if( Array.isArray(filtros) ){
+      for( const Objeto of listado ){
+
+        let comparacion = true;
+
+        for( const filtro of filtros ){
   
-        for( const objeto of listado ){
+          if( filtro[0] == undefined || Objeto[filtro[0]] == undefined || !Valor.comparar( Objeto[filtro[0]], filtro[1], filtro[2] ) ){
   
-          let comparacion = true;
-  
-          for( const filtro of filtros ){
-    
-            if( filtro[0] !== undefined && objeto[filtro[0]] !== undefined && !this.comparar( ...filtro ) ){
-    
-              comparacion == false;
-  
-              break;            
-            }
+            comparacion = false;
+
+            break;            
           }
-  
-          if( comparacion ) resultado.push(objeto);
         }
-      }
-      else if( typeof(filtros) == 'object' ){
-  
-        for( const objeto of listado ){
-  
-          let comparacion = true;
-  
-          for( const ide_filtro in filtros ){
-    
-            if( objeto[ide_filtro] !== undefined && !this.comparar( objeto[ide_filtro], comparador, filtros[ide_filtro] ) ){
-  
-              comparacion == false;
-  
-              break;
-            }
-          }
-  
-          if( comparacion ) resultado.push(objeto);
-        }
+
+        if( comparacion ) resultado.push(Objeto);
       }
     }
+    else if( typeof(filtros) == 'object' ){
+
+      for( const Objeto of listado ){
+
+        let comparacion = true;
+
+        for( const propiedad in filtros ){
+  
+          if( Objeto[propiedad] == undefined || !Valor.comparar( Objeto[propiedad], comparador, filtros[propiedad] ) ){
+
+            comparacion = false;
+
+            break;
+          }
+        }
+
+        if( comparacion ) resultado.push(Objeto);
+      }
+    }      
   
     return resultado;
   }
 
 };
+
+module.exports = Valor;

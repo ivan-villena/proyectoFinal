@@ -15,35 +15,35 @@
 
 /* Globales */
 
-@import url('./css/config/variables.css');
+@import url('./config/variables.css');
 
-@import url('./css/config/normalize.css');
+@import url('./config/normalize.css');
 
-@import url('./css/config/animations.css');
+@import url('./config/animations.css');
 
 /* Estructura de Página */
 
-@import url('./css/component/header.css');
+@import url('./partials/header.css');
 
-@import url('./css/component/navbar.css');
+@import url('./partials/navbar.css');
 
-@import url('./css/component/footer.css');
+@import url('./partials/footer.css');
 
 /* Elementos */
 
-@import url('./css/component/form.css');
+@import url('./document/form.css');
 
-@import url('./css/component/title.css');
+@import url('./document/button.css');
 
-@import url('./css/component/button.css');
+@import url('./document/title.css');
 
 /* Complementos */
 
-@import url('./css/component/card.css');
+@import url('./components/card.css');
 
 /* Ajustes */
 
-@import url('./css/config/settings.css');
+@import url('./config/settings.css');
 
 
 

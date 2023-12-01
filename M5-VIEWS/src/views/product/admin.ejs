@@ -1,17 +1,17 @@
 
-<%-include("./partials/head")%>
+<%-include("../partials/head")%>
 
 <main class="main-container">
 
   <article class="admin container">
 
-    <form class="form admin__search" onsubmit="this.preventDefault()">
+    <form class="form admin__search">
 
       <fieldset class="form__row">
 
-        <img class="icon" src="./img/icons/search_icon.svg" alt="Lupa para Buscar">
+        <img class="icon" src="/img/icons/search_icon.svg" alt="Lupa para Buscar">
 
-        <input class="form__control" type="text" name="buscar" id="product-listar" placeholder="Código, nombre o categoría...">
+        <input class="form__control" type="text" name="buscar" id="product-listar" placeholder="Código, Licencia o Categoría...">
 
       </fieldset>
 
@@ -21,13 +21,7 @@
 
       <h2 class="title">Listado de Productos</h2>
 
-      <form class="form with-icon" onsubmit="this.preventDefault()">
-
-        <label class="form__label add" for="product-agregar">AGREGAR</label>
-
-        <button class="button add" type="submit">+</button>
-
-      </form>
+      <p class="form with-icon">AGREGAR <a class="button add" href="/product/create">+</a></p>
 
     </div>
     
@@ -48,20 +42,20 @@
         <% for( const Product of products ){ %>
 
         <tr class="table__item">
-          <td class="table__data"><%Product.id%></td>
-          <td class="table__data"><%Product.sku%></td>
-          <td class="table__data"><%Product.name%></td>
-          <td class="table__data"><%Product.licence%></td>
+          <td class="table__data"><%=Product.id%></td>
+          <td class="table__data"><%=Product.sku%></td>
+          <td class="table__data"><%=Product.name%></td>
+          <td class="table__data"><%=Product.Licence.name%></td>
           <td class="table__data">
 
             <nav class="with-icon">
 
-              <a class="icon" href="/product/<%Product.id%>/edit">
-                <img src="./img/icons/edit_pencil.svg" alt="Lapiz para Editar">
+              <a class="icon" href="/product/<%=Product.id%>?">
+                <img src="/img/icons/edit_pencil.svg" alt="Lapiz para Editar">
               </a>
 
-              <a class="icon" href="/product/<%Product.id%>/delete">
-                <img src="./img/icons/delete_trash.svg" alt="Tacho para Descartar">
+              <a class="icon" href="/product/<%=Product.id%>?">
+                <img src="/img/icons/delete_trash.svg" alt="Tacho para Descartar">
               </a>
 
             </nav>
@@ -80,4 +74,4 @@
 </main>
 
 
-<%-include("./partials/foot")%>
+<%-include("../partials/foot")%>

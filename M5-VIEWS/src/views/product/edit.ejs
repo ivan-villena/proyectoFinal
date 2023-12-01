@@ -1,5 +1,5 @@
 
-<%-include("./partials/head")%>
+<%-include("../partials/head")%>
 
 <main class="main-container">
 
@@ -19,8 +19,11 @@
 
             <% for( const Category of categorys ){ %>
 
-            <option value="<%Category.id%>"<%=`${Category.id == Product.category ? " selected" : ""}`%>>
-              <%Category.name%>
+            <option 
+              value="<%=Category.id%>"
+              <%=`${Category.id == Product.category ? " selected" : ""}`%>
+            >
+              <%=Category.name%>
             </option>
 
             <% } %>
@@ -36,8 +39,11 @@
 
             <% for( const Licence of licences ){ %>
 
-              <option value="<%Licence.id%>"<%=`${Licence.id == Product.licence ? " selected" : ""}`%>>
-                <%Licence.name%>
+              <option 
+                value="<%=Licence.id%>"
+                <%=`${Licence.id == Product.licence ? " selected" : ""}`%>
+              >
+                <%=Licence.name%>
               </option>
             <% } %>
             
@@ -68,7 +74,7 @@
 
         <div class="form__field">
           <label class="form__label" for="product-price">Precio:</label>
-          <input class="form__control" type="text" name="price" id="product-price" value="$ <%=Product.price.toLocaleString('es', { style: 'currency' })%>">
+          <input class="form__control" type="text" name="price" id="product-price" value="$ <%=Product.price.toFixed(2)%>">
         </div>
 
         <div class="form__field">
@@ -90,9 +96,10 @@
           <select class="form__control" name="cuotas" id="product-cuotas">
 
             <% for( const Cuota of cuotas ){ %>
-              <option value="<%Cuota.id%>"
-                <%=`${cuotas == cuotas_defaul ? " default" : ""}`%>
-                <%=`${Cuota.id == Product.cuotas ? " selected" : ""}`%>
+
+              <option value="<%=Cuota.id%>"
+                <%=`${ Cuota.id == cuotas_defaul ? ` default="1"` : ""}`%>
+                <%=`${ Cuota.id == Product.cuotas ? ` selected="1"` : ""}`%>
               >
                 <%=Cuota.name%>
               </option>
@@ -137,4 +144,4 @@
   
 </main>
 
-<%-include("./partials/foot")%>
+<%-include("../partials/foot")%>
